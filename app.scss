@@ -1,0 +1,23 @@
+$mdc-theme-primary: #ffee00;
+$mdc-theme-on-primary: rgb(0, 0, 0);
+$mdc-theme-surface: rgb(238, 255, 192);
+$mdc-theme-on-surface: black;
+
+@import url("https://use.typekit.net/kdn1bvr.css");
+$mdc-typography-font-family: unquote("strenuous, sans-serif");
+$mdc-typography-font-weight: 700;
+
+//$mdc-shape-small-component-radius: 0px;
+
+@import "@material/textfield/mdc-text-field";
+@import "@material/button/mdc-button";
+@import "@material/list/mdc-list";
+
+.food-field {
+    width: 300px;
+    margin: 20px 0;
+}
+
+.burton-block {
+    display: block;
+}
