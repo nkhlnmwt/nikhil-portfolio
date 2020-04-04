@@ -8,10 +8,6 @@ module.exports = [{
       // But we never use style-bundle.js
       filename: 'style-bundle.js',
     },
-    devServer: {
-        inline:true,
-        port: process.env.PORT || 3000
-    },
     module: {
       rules: [
         {
