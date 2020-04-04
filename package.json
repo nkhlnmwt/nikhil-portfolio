@@ -22,9 +22,5 @@
     "@material/button": "^5.1.0",
     "@material/list": "^5.1.0",
     "@material/textfield": "^5.1.0"
-  },
-  "engines": {
-    "node": "10.16.x"
   }
-
 }
