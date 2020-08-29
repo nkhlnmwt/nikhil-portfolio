@@ -99,6 +99,12 @@ body {
     grid-area: itemi;
   }
 
+  .index-images1{
+    height: inherit;
+    width: 40.5vw;
+    object-fit: cover;
+  }
+
 .index-images{
   height: inherit;
   width: 19.5vw;
@@ -147,6 +153,28 @@ body {
 
 }
 
+.containerp-i1 {
+  display:grid;
+      margin-right: 3vw;
+  
+  grid-template-columns: 4vw 19.5vw 19.5vw ;
+  grid-template-rows: 18.5vw  18.2vw 18.5vw 18.5vw 1vw;
+  
+  column-gap: 1.5vw;
+  row-gap: 1.5vw;
+
+  float:right;
+
+  grid-template-areas: 
+
+  ". itemb iteme "
+  ". itemc itemf "
+  ". itemd itemg "
+  ". itema itema "
+  ". . . "
+  
+
+}
 
 .containerp-i {
     display:grid;
