@@ -7,6 +7,21 @@ body {
   margin: 0;
 }
 
+.italic {
+  -moz-transition: all 1s;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+}
+
+.italic:hover {
+  -webkit-transform: skewX(-20deg);
+  -moz-transform: skewX(-20deg);
+  -o-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+}
+
+
 #navbar {
   background-color: rgb(255, 255, 255);
   position: fixed;
@@ -33,6 +48,16 @@ body {
   background-color: rgb(248, 240, 255);
   color: rgb(89, 44, 194);
   font-style: italic;
+}
+
+.columni {
+  float: left;
+
+  font-family:system-ui;
+  height: 58vw;
+  margin-top:6vw;
+  margin-bottom:6vw;
+
 }
 
 .column {
@@ -185,8 +210,8 @@ body {
     display:grid;
         margin-right: 3vw;
     
-    grid-template-columns: 4vw 19.5vw 19.5vw ;
-    grid-template-rows: 5vw 1vw 11vw 11vw 11vw;
+    grid-template-columns: 4vw 19.5vw 19.5vw 19.5vw 19.5vw 4vw;
+    grid-template-rows: 11vw 11vw 11vw;
     
     column-gap: 1.5vw;
     row-gap: 1.5vw;
@@ -194,11 +219,11 @@ body {
     float:right;
 
     grid-template-areas: 
-    ". itema itema "
-    ". . . "
-    ". itemb iteme "
-    ". itemc itemf "
-    ". itemd itemg "
+    ". itemb iteme . . ."
+    ". itemc itemf . . ."
+    ". itemd itemg . . ."
+    ". . . . . ."
+ 
     
 
   }
