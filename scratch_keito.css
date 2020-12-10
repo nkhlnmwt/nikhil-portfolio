@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,200;0,300;1,200;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@700&display=swap');
+
+@font-face {
+  font-family: Georama;
+  src: url('fonts/Georama[wdth,wght].ttf') format('truetype');
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'IBM Plex Mono','-apple-system','BlinkMacSystemFont','IBM Plex Mono','Roboto','Oxygen-Sans','Ubuntu','Cantarell','Helvetica Neue', sans-serif;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: rgba(255, 255, 255, 0.651);
+    overflow: hidden;
+    box-shadow:1px 1px 1px 1px rgba(211, 211, 211, 0.699);
+}
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+      padding-top: 1vw;
+    float: left;
+    color: #505050;
+    text-align: center;
+    width: 8vw;
+    text-decoration: none;
+    font-size: 1VW;
+    padding-bottom: 1vw;
+
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    color: rgb(174, 75, 255);
+    text-decoration: underline;
+    font-style: italic;
+
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: #ffffff00;
+    color: rgb(0, 30, 165);
+  }
+
+
+body{
+   background-color: #ffffff;
+}
+
+.a{
+  text-decoration-line: underline;
+}
+
+.column {
+  font-family: 'COMMISSIONER','IBM Plex Mono', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  margin-top: 6vw;
+  margin-bottom: 6vw;
+  vertical-align: top;
+  float: top;
+  display: table-cell;
+
+}
+
+}
+
+.column-a {
+  font-family: system-ui;
+  text-align: center;
+  margin-top: 6vw;
+  margin-bottom: 6vw;
+  vertical-align: top;
+  float: top;
+  display: table-cell;
+  box-shadow:1px 3px 2px 3px rgba(186, 188, 206, 0.699);
+
+}
+
+
+.column-a:hover {
+    font-family: 'IBM Plex Mono', Tahoma, Geneva, Verdana, sans-serif, system-ui;
+    text-align: center;
+    margin-top: 6vw;
+    margin-bottom: 6vw;
+    vertical-align: top;
+    float: top;
+    display: table-cell;
+    box-shadow:1px 3px 2px 3px rgba(219, 219, 219, 0.699);
+    background-color: rgb(248, 249, 255);
+  }
+
+
+.text{
+  font-size: 2.5vw;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: inline-block;
+  clear: both;
+  font-family:system-ui;
+  vertical-align:top;
+}
+
+
+.wrapper{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.wrapper .sidebar{
+  width: 10vw;
+  height: 100%;
+  background: #ffffff;
+  padding: 30px 0px;
+  padding-left: 2vw;
+  position: fixed;
+  font-size: 1vw;
+  font-weight: 700;
+  margin-top: 5vw;
+
+}
+
+.wrapper .sidebar h2{
+  color: rgb(183, 170, 194);
+  text-transform: uppercase;
+  text-align: left; 
+  margin-bottom: 30px;
+}
+
+.wrapper .sidebar ul li{
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}    
+
+.wrapper .sidebar ul li a{
+  color: #a28ea7;
+  display: block  ;
+}
+
+.wrapper .sidebar ul li a .fas{
+  width: 25px;
+}
+
+.wrapper .sidebar ul li:hover{
+}
+    
+.wrapper .sidebar ul li:hover a{
+  color: rgb(0, 0, 0);
+}
+ 
+.wrapper .sidebar .social_media{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+/*
+.wrapper .sidebar .social_media a{
+  display: block;
+  width: 40px;
+  background: #615f6d00;
+  height: 40px; 
+  line-height: 4vw;
+  text-align: center;
+  margin: 0 5px;
+  color: #bdb8d7;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+*/
+.wrapper .main_content{
+  width: 81vw;
+  margin-left: 15vw;
+  margin-top: 10vw;
+  margin-right: 2vw;
+}
+
+.wrapper .main_content .header{
+  background: #fff;
+  color: #000000;
+}
+
+.wrapper .main_content .info{
+  color: #000000;
+  line-height: 3vw; 
+}
+
+.wrapper .main_content .info div{
+  margin-bottom: 20px;
+}
+
+@media (max-height: 500px){
+  .social_media{
+    display: none !important;
+  }
+}
