@@ -438,6 +438,11 @@ a:hover{
 
 
 .common-style {
-  font-family:spectral,serif;font-weight: 400;font-size: 1.2vw; line-height: 1.7vw; margin-top: 0%; margin-bottom: 0%;
+  font-family:spectral, serif;
+  font-weight: 400;
+  font-size: 1.2vw;
+  line-height: 1.7vw;
+  margin-top: 0%;
+  margin-bottom: 0%;
 }
 
