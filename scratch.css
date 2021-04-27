@@ -38,11 +38,10 @@ body {
 .column {
     float: left;
     width: auto;
-    font-family:system-ui;
+    font-family: 'georama';
     height: 58vw;
     margin-top:6vw;
     margin-bottom:6vw;
-
   }
 
   .columnf {
@@ -103,6 +102,12 @@ body {
   .item-i5{
     grid-area: itemi;
   }
+
+  .item-9{
+    grid-area: itemz;
+  }
+
+  
 
   .index-images1{
     height: inherit;
@@ -183,24 +188,19 @@ body {
 
 .containerp-i {
     display:grid;
-        margin-right: 3vw;
-    
-    grid-template-columns: 4vw 19.5vw 19.5vw ;
+    margin-right: 3vw;
+    grid-template-columns: 4vw 19.5vw 19.5vw;
     grid-template-rows: 5vw 1vw 11vw 11vw 11vw;
-    
     column-gap: 1.5vw;
     row-gap: 1.5vw;
-
     float:right;
-
-    grid-template-areas: 
-    ". itema itema "
-    ". . . "
-    ". itemb iteme "
-    ". itemc itemf "
-    ". itemd itemg "
-    
-
+    grid-template-areas:
+      ". itema itema "
+      ". . . "
+      ". itemb iteme "
+      ". itemc itemf "
+      ". itemd itemg "
+      ". itemz itemy ";
   }
 
   .containerp-ir {
@@ -360,8 +360,7 @@ body {
 
 a {
   text-decoration: none;
-  color:rgb(101, 99, 218);
-
+  color: #3D00B1;
 }
 
 a:hover{
