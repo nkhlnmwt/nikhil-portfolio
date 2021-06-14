@@ -36,13 +36,6 @@ body {
 }
 
 
-.column_design_only {
-  float: left;
-  width: auto;
-  font-family: 'georama';
-  height: 20vw;
-  margin-top:6vw;
-}
 
 .column {
     float: left;
@@ -72,6 +65,14 @@ body {
     font-family:system-ui;
   }
 
+  .column_design_only {
+    float: left;
+    width: auto;
+    font-family: 'georama';
+    height: 20vw;
+    margin-top:6vw;
+  }
+  
 
   .item-1{
     grid-area: itema;
