@@ -35,6 +35,15 @@ body {
   font-style: italic;
 }
 
+
+.column_design_only {
+  float: left;
+  width: auto;
+  font-family: 'georama';
+  height: 20vw;
+  margin-top:6vw;
+}
+
 .column {
     float: left;
     width: auto;
