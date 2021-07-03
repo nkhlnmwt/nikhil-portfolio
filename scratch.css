@@ -35,13 +35,31 @@ body {
   font-style: italic;
 }
 
+p{
+  font-family: spectral, serif;
+}
+h2{
+  font-family: georama, sans-serif;
+  font-variation-settings: "wght" 700;
+}
 
+h3{
+  font-family: spectral, serif;
+}
 
 .column {
     float: left;
     width: auto;
     font-family: 'georama';
     height: 58vw;
+    margin-top:6vw;
+    margin-bottom:6vw;
+  }
+  .column-process {
+    float: left;
+    width: auto;
+    font-family: 'georama';
+    height: auto;
     margin-top:6vw;
     margin-bottom:6vw;
   }
@@ -253,6 +271,19 @@ body {
     ". . . "
 
   }
+
+  .container-process {
+      margin-right: 3vw; 
+      margin-left: 5vw; 
+
+
+      
+      column-gap: 1.5vw;
+      row-gap: 1.5;
+  
+  
+    }
+
 
   .containerp-r {
   display:grid;
