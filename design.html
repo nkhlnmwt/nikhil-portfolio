@@ -74,6 +74,17 @@
   padding-top: 6vh;
   padding-bottom: 6vh;
   }
+
+  .containert {
+  margin: 8px;
+  display: grid;
+  grid-template-columns: 10fr 10fr 0.1fr ;
+  grid-template-rows: 22vw auto auto auto;
+  grid-gap: 1.5vw 1.5vw; 
+  border-top: 1px solid rgb(145, 145, 145);  
+  padding-top: 6vh;
+  padding-bottom: 6vh;
+  }
   .cell {
   color: rgba(0, 0, 0, 0);
   font-size: 2.4vh;
@@ -151,6 +162,18 @@
   border-top: 1px rgb(182, 182, 182) solid;
   
   }
+
+  .containert {
+      margin: 2rem;
+  display: grid;
+  grid-template-columns: 10fr 10fr 0.5fr 10fr 10fr;
+  grid-template-rows: 12vw auto;
+  grid-gap: 1.5vw 1.5vw; 
+  padding-top: 6vw;
+  padding-bottom: 6vw;
+  border-top: 1px rgb(182, 182, 182) solid;
+  
+  }
   .cell {
   color: rgb(0, 0, 0);
   }
@@ -213,6 +236,18 @@
   border-top: 1px rgb(182, 182, 182) solid;
   
   }
+
+  .containert {
+    margin: 2rem;
+  display: grid;
+  grid-template-columns: 15fr 15fr 0.5fr 10fr 0.5fr;
+  grid-template-rows: 12vw auto;
+  grid-gap: 1.5vw 1.5vw; 
+  padding-top: 6vw;
+  padding-bottom: 6vw;
+  border-top: 1px rgb(182, 182, 182) solid;
+  
+  }
   .cell {
   color: rgb(0, 0, 0);
   }
@@ -252,7 +287,6 @@
   line-height: 1.8vw;
   font-weight: 300;
   padding-top: -15px;
-  
   
   }
   .cell-10 {
@@ -315,9 +349,49 @@
   
   </div>
   
+
+
+
+<!--here's where the product design study starts-->
+<div class="containert" style="font-family: georama;">
+  <div class="cell cell-1"><img src="img/productdesign.png" width="207%"><br><br> 
+    <br>
+</div>
+  <div class="cell cell-2"></div>
+  <div class="cell cell-3"></div>
+  <div class="cell cell-4" style="font-family: 'georama',sans-serif;font-weight: 700;">1. Product experiments at niro.money</div>
+  <div class="cell cell-5" ><img style="width: 30%;" src="img/stamp.svg"></img>   </div>
+  <div class="cell cell-6"></div>
+  <div class="cell cell-7"></div>
+  <div class="cell cell-8"><div style="border-left:  1px rgba(184, 184, 184, 0) solid; height: 110%; margin-top: -13.5vw;"></div></div>
+  <div class="cell cell-9">Here on the left is one of the product that I worked on.
+    This was a combined effort. 
+    <br>
+    The end goal here was to increase the conversion of the users in the top part of the funnel. 
+    <br>
+    This didn’t required a combination of skills and recognising what we can implement according to the need. <br> Sometimes we did “user research”, at other times, “the design system knowledge”. And also the understanding when product needs to take the back seat.    To go through this project, I recommend going through the flowchart first, followed by the text below.
+<br><br><br><br><br><br><br><br><br><br>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+  </div> 
+  <div class="cell cell-10"></div> 
+  <div class="cell cell-11" style="height: 0vw;"> </div> 
+
+</div>
+
+
+
+
 <!--here's where the lsq stuff starts-->
 <div class="container" style="font-family: georama;">
-  <div class="cell cell-1"><img src="img/ops_lat_long.jpg" width="207%"><br><br><img src="img/ops_walkthrough.gif" width="207%"></img></div>
+  <div class="cell cell-1"><img src="img/ops_lat_long.jpg" width="207%"><br><br><img src="img/ops_walkthrough.gif" width="207%"></img>  <img src="img/ops_user-interview-notes.png" width="100%" style="padding-top: 1.5vw;"></img>
+    <br>
+    <span style="font-style: italic; font-family: spectral;">Notes from the usability testing/session observing the user on a call, which was later digitised in google docs</span></div>
   <div class="cell cell-2"></div>
   <div class="cell cell-3"></div>
   <div class="cell cell-4" style="font-family: 'georama',sans-serif;font-weight: 700;">Enterprise tool design. User interviews helped the most. </div>
@@ -336,11 +410,9 @@
   <br>
     <br>-Then some main designs decisions were explored, “whether to make a page that works both as an ‘edit mode’, and ‘view mode’ like notion” or to keep the different modes saparate. So these choises were made based on our assumptions about how the users will behave. 
     <br>-User interviews: since it's an internal product, so I asked one of the Ops dept person to go through the journey, in the existing, app, that was not as efficient. (and also understood what their concerns were.) A bunch of notes we found out from that: like what are the activities they usually record at the same time, What happens on call1 vs call2.  The page on the right shows the notes from the same session. This was the fastest way to get insight into what they do, what the painpoints are, what information do they usually fill before the call, what info they look for, their workflows.
-    <br>
-  <img src="img/ops_user-interview-notes.png" width="100%" style="padding-top: 1.5vw;"></img>
-  <br>
-  <span style="font-style: italic;">Notes from the usability testing/session observing the user on a call, which was later digitised in google docs</span>
-    <br><br>-Finding a front-end framework, that will have matching UI elements to avoid making things from scratch. (we went with Fluent UI)
+
+ 
+<br>-Finding a front-end framework, that will have matching UI elements to avoid making things from scratch. (we went with Fluent UI)
   <br>
  
 
@@ -349,6 +421,8 @@
   <div class="cell cell-11" style="height: 0vw;"> </div> 
 
 </div>
+
+
 
 <!--here's where the lsq stuff ends-->
 
@@ -406,7 +480,7 @@
           </div>
   
           <!--here's where the 3rd real stuff starts-->
-  
+<!--cendrol copy for refrencing cell numbers
           <div class="container" style="font-family: georama;">
             <div class="cell cell-1"><img src="img/ced.png" style="width: 207%; border-bottom: rgb(134, 134, 134) 1px solid;"></img><br><br><img src="img/phone_cendrol.jpg" style="width: 100%; border-bottom: rgb(134, 134, 134) 1px solid;"></img></div>
             <div class="cell cell-2" style="color: black;">2.</div>
@@ -427,6 +501,34 @@
                 Hovering for the desktop version and a set of radio switches for the mobile version.
                 <img src="img/controls_cendrol.jpg" style="width: 107%;"></img></div> 
             <div class="cell cell-10"style="color: black;">10.What it looked like before:<img src="img/before.jpg" style="width: 85%;"></img><img src="img/writing.jpg" style="width: 70%; padding-top: 1.5vw;"></img> 
+            <div class="cell cell-11" style="color: black;" style="height: 0vw;"> 
+
+            </div> 
+    
+          </div>
+        </div>
+      -->
+  
+          <div class="container" style="font-family: georama;">
+            <div class="cell cell-1"><img src="img/ced.png" style="width: 207%; border-bottom: rgb(134, 134, 134) 1px solid;"></img><br><br><img src="img/phone_cendrol.jpg" style="width: 100%; border-bottom: rgb(134, 134, 134) 1px solid;"></img></div>
+            <div class="cell cell-2" style="color: black;"></div>
+            <div class="cell cell-3"style="color: black;"></div>
+            <div class="cell cell-4" style="font-family: 'georama',sans-serif;font-weight: 700;">5. Cendrol, Information architecture and some UX</div>
+            <div class="cell cell-5" style="color: black;"><img style="width: 30%;" src="img/stamp.svg"></img>   <img style="width: 30%;" src="img/recommed.svg" ></img></div>
+            <div class="cell cell-6"style="color: black;"></div>
+            <div class="cell cell-7"style="color: black;"></div>
+            <div class="cell cell-8"style="color: black;"><div style="border-left:  1px rgb(184, 184, 184) solid; height: 110%; margin-top: -13.5vw;"></div></div>
+            <div class="cell cell-9">Cendrol is a construction company. Cendrol wanted to digitize the packages they were distributing to their leads. the Packages contained information about their different offerings for building a house. <br><br>They started doing it with sending out pdfs for the different plans, which was hard for customers to scan through, especially while comparing thier plans. It wasn’t just a bad experience, but also didn’t make business sense since it was harder for them show them the advantages in the “Luxury+” plan compared to the “premium+”.
+                <br><br><br>1. first step was to write down all the information, to make sense of what information belong to what.
+                <br><br>one of the outcomes of writing it down was the realisation that a lot of the information was repetative, what needed to be written again and again, and what didnt. <br><br><br><br>2. started laying it out with keeping in mind that it could be beneficail if we only wrote what differered in the different pricing plans instead of writing everything again. 
+                <img src="img/this_came_up.png" style="width: 207%;"></img>
+                <br><br>
+                3. The problem was that there was not enough space to put all the data into all the coloumns.Finally we realised that it will make be much easiar to scan if we did it using a website. <br>A possible solution came up
+                <img src="img/Group80.png" style="width: 207%; border-bottom: rgb(134, 134, 134) 1px solid;"></img>
+                <br><br>
+                Hovering for the desktop version and a set of radio switches for the mobile version.
+                <img src="img/controls_cendrol.jpg" style="width: 107%;"></img></div> 
+            <div class="cell cell-10"style="color: black;">What it looked like before:<img src="img/before.jpg" style="width: 85%;"></img><img src="img/writing.jpg" style="width: 70%; padding-top: 1.5vw;"></img> 
             <div class="cell cell-11" style="color: black;" style="height: 0vw;"> 
               <!-- 11* -->
             </div> 
