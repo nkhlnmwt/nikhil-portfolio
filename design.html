@@ -85,6 +85,17 @@
   padding-top: 6vh;
   padding-bottom: 6vh;
   }
+
+  .containerot {
+  margin: 8px;
+  display: grid;
+  grid-template-columns: 10fr 10fr 0.1fr ;
+  grid-template-rows: 22vw auto auto auto;
+  grid-gap: 1.5vw 1.5vw; 
+  border-top: 1px solid rgb(145, 145, 145);  
+  padding-top: 6vh;
+  padding-bottom: 6vh;
+  }
   .cell {
   color: rgba(0, 0, 0, 0);
   font-size: 2.4vh;
@@ -174,6 +185,19 @@
   border-top: 1px rgb(182, 182, 182) solid;
   
   }
+
+  .containerot {
+      margin: 2rem;
+  display: grid;
+  grid-template-columns: 10fr 10fr 0.5fr 10fr 10fr;
+  grid-template-rows: 12vw auto;
+  grid-gap: 1.5vw 1.5vw; 
+  padding-top: 6vw;
+  padding-bottom: 6vw;
+  border-top: 1px rgb(182, 182, 182) solid;
+  
+  }
+
   .cell {
   color: rgb(0, 0, 0);
   }
@@ -248,6 +272,19 @@
   border-top: 1px rgb(182, 182, 182) solid;
   
   }
+
+  .containerot {
+    margin: 2rem;
+  display: grid;
+  grid-template-columns: 5fr 5fr 0.5fr 20fr 10fr;
+  grid-template-rows: 12vw auto;
+  grid-gap: 1.5vw 1.5vw; 
+  padding-top: 6vw;
+  padding-bottom: 6vw;
+  border-top: 1px rgb(182, 182, 182) solid;
+  
+  }
+
   .cell {
   color: rgb(0, 0, 0);
   }
@@ -353,37 +390,54 @@
 
 
 <!--here's where the product design study starts-->
-<div class="containert" style="font-family: georama;">
-  <div class="cell cell-1"><img src="img/what_changed.png" width="207%"><br><br><img src="img/productdesign.png" width="207%"><br><br> 
+<div class="containerot" style="font-family: georama;">
+  <div class="cell cell-1"><img src="img/context.png" width="175%">
     <br>
 </div>
   <div class="cell cell-2"></div>
   <div class="cell cell-3"></div>
-  <div class="cell cell-4" style="font-family: 'georama',sans-serif;font-weight: 700;">1. Product experiments at niro.money</div>
-  <div class="cell cell-5" ><img style="width: 30%;" src="img/stamp.svg"></img>   </div>
+  <div class="cell cell-4" style="font-family: 'georama',sans-serif;font-weight: 700;">1. How have we been shaping up the product at Niro.</div>
+  <div class="cell cell-5" >   </div>
   <div class="cell cell-6"></div>
   <div class="cell cell-7"></div>
   <div class="cell cell-8"><div style="border-left:  1px rgba(184, 184, 184, 0) solid; height: 110%; margin-top: -13.5vw;"></div></div>
-  <div class="cell cell-9">Here on the left is one of the product that I worked on.
-    This was a combined effort. 
-    <br>
-We are only talking about how the product experiment was conducted.
-    <br>
-    The end goal here was to increase the conversion of the users in the top part of the funnel. 
-    <br>
-    This required a combination of skills and recognising what we can implement according to the need. <br> Sometimes we did “user research”, at other times, “the design system knowledge”. And also the understanding when product needs to take the back seat.  <br>To go through this project, I recommend going through the flowchart first, followed by the text below.
-<br><br><br><br><br><br><br><br><br><br>
+  <div class="cell cell-9" >This project outlines the story of my product experience at Niro so far. Not necessarily a design focused project, as at times we had to rely on other channels too.
+<br><br>
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <span style="font-weight: 700; font-variant: small-caps;">problem statement:</span> Users with pre-approved offers were dropping off without activating their Loans/CLs. (3.8% of the users out of the ones that were reached)
+    <br><br>
+    Below we are explaining the process that went behind increasing the convertions at the top of the funnel by ~10 percent.
+    <br><br>
+    We approached this problem with multiple angles:
+    <br>1. Let’s try to improve it as much as we can with UI/UX, and then test it with real users, for finding things that are making them stuck.
+    <br> - First step involved making improving the UI in general, 1. communicating what’s happening better on the screen, 2. using a more consistant design system for trust etc. More on how we arrive at a design system which balances "developer effort" with "enough personalisation" can be found <a href="http://www.nimawat.com/design2.html">here</a>.
+    <br> - Since we didn’t see many improvements just based on these interactions. We started talking with users. talked with 35 of them. We targetted the users that were past step one, but then were stuck when it came to claim the loan. (a lot of these insights were things like, they didn’t know what a PL was)
+    <br>By combining our assumptions and the insights we gained from calls, we were able to arrive at these set of experiments.
+    <br><div><img src="img/mindmap.png" style="width: 100%;"></div>
+<br>Below are 3 of these ideas, after execution
+<br><br><div><img src="img/inflesh.png" style="width: 100%;"></div>
+<br>Next step was running these variants for 2 weeks.
+<br>After that time, we noticed a 5% improvement from the previous conversion rate. 
+<br><br>
+<br><span style="font-weight: 700;">An experiment to understand if the users are interested in loans.</span>
+<br>Since the improvement was not as significant, it made us question about. The quality of data in the set we were provided with. So to verify the same, we ran another experiment where we reduced the interest rate to 12% (similar to competitve NBFCs)
+<br>The objective of the experiment was to evaluate whether we are able to get a similar level of interest from the CatagoryA and B as we are able to get from CatC and D.  In the image below you can see some more specific varibles being tracked.
+<br><img src="img/metrics.png" style="width: 70%;">
+<br><br> <span style="font-weight: 700;">2. Marketing Efforts: let’s make efforts from marketing side.</span>
+<br>Since we saw the difference in convertion in CatAB. 
+<br>
+<br>We also started sending out different communication and offers to different cohort of users.
+<br>
+<br>Our expectation was an increase of 3% from catagorising and sending out the offers, but instead it resulted in much more. 
+<br>Instead we saw about 6% more conversations. So we double downed on this, and started catagorising users further, by tagging differnet medium to mixpanel. We observed that the medium that’s working the best. (whatsapp, SMS, IVR). This helped up focus most of the energy towards these mediums.
+<br>
+<br>Finally, we were able to combine the changes in the UX, and idea of segragating users based on catagory, and were able to increase the top of the funnel by ~10%.  
+</div>
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br>
 
 
-
-
-  </div> 
+  
+  
   <div class="cell cell-10"></div> 
   <div class="cell cell-11" style="height: 0vw;"> </div> 
 
