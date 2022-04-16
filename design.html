@@ -68,11 +68,15 @@
   margin: 8px;
   display: grid;
   grid-template-columns: 10fr 10fr 0.1fr ;
-  grid-template-rows: 22vw auto auto auto;
+  grid-template-rows: 5vh auto auto auto;
   grid-gap: 1.5vw 1.5vw; 
   border-top: 1px solid rgb(145, 145, 145);  
   padding-top: 6vh;
   padding-bottom: 6vh;
+  grid-template-areas:  "text1 text1 gap"
+  "text1 text1 gap"
+  "image1 image2 gap2"
+  "textbelow1 textbelow1 gap2"; 
   }
 
   .containert {
@@ -84,17 +88,26 @@
   border-top: 1px solid rgb(145, 145, 145);  
   padding-top: 6vh;
   padding-bottom: 6vh;
+  grid-template-areas: 
+  ". . ."
+  "text1 text1 gap"
+  "textbelow1 textbelow1 gap2"; 
   }
 
   .containerot {
   margin: 8px;
   display: grid;
-  grid-template-columns: 10fr 10fr 0.1fr ;
+  grid-template-columns: 20fr 0.1fr 0.1fr ;
   grid-template-rows: 22vw auto auto auto;
   grid-gap: 1.5vw 1.5vw; 
   border-top: 1px solid rgb(145, 145, 145);  
   padding-top: 6vh;
   padding-bottom: 6vh;
+  grid-template-areas: 
+  "text1 text1 gap"
+  "image1 image2 gap2"
+  "textbelow1 textbelow1 gap2"; 
+  
   }
   .cell {
   color: rgba(0, 0, 0, 0);
@@ -102,25 +115,36 @@
   }
   .cell-1 {
   background: rgb(255, 255, 255);
+
   }
   .cell-2 {
   background: rgba(255, 68, 0, 0)255, 255);
+
+
   }
   .cell-3 {
   background: rgb(255, 255, 255);
   grid-row: 1; 
   grid-column: 3; 
+
+
+
   }
   .cell-4 {
   color: rgb(0, 0, 0);
   grid-row: 1; 
   grid-column: 1; 
+
+
   }
   .cell-5 {
   background: rgb(255, 255, 255);
   grid-row: 1; 
   grid-column: 2; 
   height: 15vw;
+
+
+
   }
   .cell-6 {
   background: rgba(50, 205, 50, 0)255, 255);
@@ -128,12 +152,16 @@
   }
   .cell-7 {
   background: rgba(255, 255, 255, 0);
+
   
   }
   .cell-8 {
   background: rgb(255, 255, 255);
   grid-row: 2; 
   grid-column: 3; 
+
+
+
   }
   .cell-9 {
   font-size: 2.2vh;
@@ -142,6 +170,9 @@
   grid-row: 4; 
   grid-column: 1;
   font-weight: 400;
+
+
+
   }
   .cell-10 {
     color: black;
@@ -151,12 +182,95 @@
   background: rgba(255, 255, 255, 0);
   font-size: 1.2vw;
   font-family: "spectral", georgia, serif;
+
+
+
   }
   
   .cell-11 {
   background: rgb(110, 187, 117);
   
   }
+
+  .celot-1 {
+  background: rgb(255, 255, 255);
+  grid-area: image1;
+
+
+  }
+  .celot-2 {
+  background: rgba(255, 68, 0, 0)255, 255);
+  grid-area: image2;
+
+  }
+  .celot-3 {
+  background: rgb(255, 255, 255);
+
+  grid-area: gap1;
+
+  }
+  .celot-4 {
+  color: rgb(0, 0, 0);
+
+  grid-area: text1;
+
+  }
+
+  .celotitle-4 {
+  color: rgb(0, 0, 0);
+  font-size: 6vh;
+
+  grid-area: text1;
+
+  }
+  .celot-5 {
+  background: rgb(255, 255, 255);
+
+  height: 15vw;
+  grid-area: text2;
+
+  }
+  .celot-6 {
+  background: rgba(50, 205, 50, 0)255, 255);
+  grid-area: imagebelow1;
+  }
+  .celot-7 {
+  background: rgba(255, 255, 255, 0);
+  grid-area: imagebelow2;
+
+  
+  }
+  .celot-8 {
+  background: rgb(255, 255, 255);
+
+  grid-area: gap2;
+
+  }
+  .celot-9 {
+  font-size: 2.2vh;
+  font-family: spectral, serif;
+  color: black;
+
+  font-weight: 400;
+  grid-area: textbelow1;
+
+  }
+  .celot-10 {
+    color: black;
+
+  
+  background: rgba(255, 255, 255, 0);
+  font-size: 1.2vw;
+  font-family: "spectral", georgia, serif;
+  grid-area: textbelow2;
+
+  }
+  
+  .celot-11 {
+  background: rgb(110, 187, 117);
+  
+  }
+
   
   }
   @media only screen and (min-width: 600px) {
@@ -258,18 +372,24 @@
   padding-top: 6vw;
   padding-bottom: 6vw;
   border-top: 1px rgb(182, 182, 182) solid;
+  grid-template-areas: 
+  "image1 image1 gap text1 text2"
+  "imagebelow imagebelow2 gap2 textbelow1 textbelow2";
   
   }
 
   .containert {
     margin: 2rem;
   display: grid;
-  grid-template-columns: 15fr 15fr 0.5fr 10fr 0.5fr;
-  grid-template-rows: 12vw auto;
-  grid-gap: 1.5vw 1.5vw; 
+  grid-template-columns: 10fr 10fr 0.5fr 10fr 10fr;
+  grid-template-rows: auto auto;
+  grid-gap: 0vw 1.5vw; 
   padding-top: 6vw;
   padding-bottom: 6vw;
   border-top: 1px rgb(182, 182, 182) solid;
+  grid-template-areas: 
+  "image1 image2 gap text1 text2"
+  "imagebelow imagebelow2 gap2 textbelow1 textbelow1";
   
   }
 
@@ -282,7 +402,9 @@
   padding-top: 6vw;
   padding-bottom: 6vw;
   border-top: 1px rgb(182, 182, 182) solid;
-  
+  grid-template-areas: 
+  "image1 image1 gap text1 text2"
+  "imagebelow imagebelow2 gap2 textbelow1 textbelow2";
   }
 
   .cell {
@@ -331,6 +453,81 @@
   font-size: 1.2vw;
   font-family: "spectral", georgia, serif;
   }
+
+  .celot-1 {
+  background: rgba(255, 255, 255, 0);
+  grid-area: image1;
+  }
+  .celot-2 {
+  background: rgba(255, 255, 255, 0);
+  grid-area: image1;
+
+  }
+  .celot-3 {
+  background: rgba(255, 255, 255, 0);
+  grid-area: gap;
+
+  
+  }
+
+  .celotitle-4 {
+    background-color: white;
+  font-size: 6vw;
+  style="font-family: georama, sans-serif;
+  font-weight: 700;
+  max-width: 20vw;
+  grid-area: text1;
+
+  }
+
+  .celot-4 {
+    background-color: white;
+  font-size: 1.7vw;
+  style="font-family: georama, sans-serif;
+  font-weight: 700;
+  max-width: 20vw;
+  grid-area: text1;
+
+  }
+  .celot-5 {
+  background: rgba(255, 255, 255, 0);
+  grid-area: text2;
+
+  }
+  .cell-6 {
+  background: rgba(255, 255, 255, 0);
+  grid-area: imagebelow;
+  }
+  .celot-7 {
+  background: rgba(255, 255, 255, 0);
+  grid-area: imagebelow2;
+
+  }
+  .celot-8 {
+  background: rgba(126, 126, 126, 0);
+  grid-area: gap2;
+
+  }
+  .celot-9 {
+    background-color: white;
+  font-size: 1.3vw;
+  font-family: "spectral", georgia, serif;
+  line-height: 1.9vw;
+  font-weight: 300;
+  padding-top: -15px;
+
+  grid-area: textbelow1;
+
+  
+  }
+  .celot-10 {
+  background: rgba(255, 255, 255, 0);
+  font-size: 1.2vw;
+  font-family: "spectral", georgia, serif;
+  grid-area: textbelow2;
+
+  }
+
   } 
   
   </style>
@@ -371,18 +568,18 @@
       </div>
     -->
   <!--here's where the real stuff starts-->
-  <div class="container" style="font-family: georama; padding-bottom: 1vw;">
-    <div class="cell cell-1" style="height: 7vw;"></div>
-    <div class="cell cell-2" style="height: 7vw;"></div>
-    <div class="cell cell-3"></div>
-  <div class="cell cell-4" style="width: 200%;font-size: 6vw;font-weight: 500; font-family: Strenuous,sans-serif;">PORTFOLIO<div style="font-family: spectral, georgia, serif; font-size: 17.5px; font-style: italic; width:200%;">Nikhil is a Product designer, who has also worked as an illustrator previously. This page has 6 projects, going through them in order is recommended.</div></div>  
-    <div class="cell cell-5" style="height: 7vw;"></div>
-    <div class="cell cell-6"></div>
-    <div class="cell cell-7"></div>
-    <div class="cell cell-8"><div style="border-left:  1px rgb(184, 184, 184) solid; height: 110%; margin-top: -13.5vw;"></div></div>
-    <div class="cell cell-9"></div> 
-    <div class="cell cell-10"></div> 
-    <div class="cell cell-11" style="height: 0vw;"> </div> 
+  <div class="containert" style="font-family: georama; padding-bottom: 1vw;">
+    <div class="cell celot-1" style="height: 7vw;"></div>
+    <div class="cell celot-2" style="height: 7vw;"></div>
+    <div class="cell celot-3"></div>
+  <div class="cell celotitle-4" style="width: 200%;font-weight: 500; font-family: Strenuous,sans-serif;">PORTFOLIO</div>  
+    <div class="cell celot-5" style="height: 7vw;"></div>
+    <div class="cell celot-6"></div>
+    <div class="cell celot-7"></div>
+    <div class="cell celot-8"><div style="border-left:  1px rgba(172, 112, 112, 0) solid; height: 110%; margin-top: -13.5vw;"></div></div>
+    <div class="cell celot-9" style="font-style:italic; width: 80%;" >Nikhil is a Product designer, who has also worked as an illustrator previously. This page has 6 projects, going through them in order is recommended.</div> 
+    <div class="cell celot-10"></div> 
+    <div class="cell celot-11" style="height: 0vw;"> </div> 
   
   </div>
   
@@ -391,17 +588,17 @@
 
 <!--here's where the product design study starts-->
 <div class="containerot" style="font-family: georama;">
-  <div class="cell cell-1"><img src="img/context.png" width="175%">
+  <div class="cell celot-1"><img src="img/context.png" width="80%">
     <br>
 </div>
-  <div class="cell cell-2"></div>
-  <div class="cell cell-3"></div>
-  <div class="cell cell-4" style="font-family: 'georama',sans-serif;font-weight: 700;">1. How have we been shaping up the product at Niro.</div>
-  <div class="cell cell-5" >   </div>
-  <div class="cell cell-6"></div>
-  <div class="cell cell-7"></div>
-  <div class="cell cell-8"><div style="border-left:  1px rgba(184, 184, 184, 0) solid; height: 110%; margin-top: -13.5vw;"></div></div>
-  <div class="cell cell-9" >This project outlines the story of my product experience at Niro so far. Not necessarily a design focused project, as at times we had to rely on other channels too.
+  <div class="cell celot-2"></div>
+  <div class="cell celot-3"></div>
+  <div class="cell celot-4" style="font-family: 'georama',sans-serif;font-weight: 700;">1. How have we been shaping up the product at Niro</div>
+  <div class="cell celot-5" >   </div>
+  <div class="cell celot-6"></div>
+  <div class="cell celot-7"></div>
+  <div class="cell celot-8"><div style="border-left:  1px rgba(184, 184, 184, 0) solid; height: 110%; margin-top: -13.5vw;"></div></div>
+  <div class="cell celot-9" ><span style="font-style: italic;">This project outlines the story of my product experience at Niro so far. Not necessarily a design focused project, as at times we had to rely on other channels too.</span>
 <br><br>
 
     <span style="font-weight: 700; font-variant: small-caps;">problem statement:</span> Users with pre-approved offers were dropping off without activating their Loans/CLs. (3.8% of the users out of the ones that were reached)
@@ -538,8 +735,9 @@
     
           </div>
   
-          <!--here's where the 3rd real stuff starts-->
-<!--cendrol copy for refrencing cell numbers
+          <!-- comment this out again here's where the 3rd real stuff starts-->
+          <!--
+cendrol copy for refrencing cell numbers
           <div class="container" style="font-family: georama;">
             <div class="cell cell-1"><img src="img/ced.png" style="width: 207%; border-bottom: rgb(134, 134, 134) 1px solid;"></img><br><br><img src="img/phone_cendrol.jpg" style="width: 100%; border-bottom: rgb(134, 134, 134) 1px solid;"></img></div>
             <div class="cell cell-2" style="color: black;">2.</div>
@@ -565,8 +763,8 @@
             </div> 
     
           </div>
-        </div>
-      -->
+        </div>-->
+
   
           <div class="container" style="font-family: georama;">
             <div class="cell cell-1"><img src="img/ced.png" style="width: 207%; border-bottom: rgb(134, 134, 134) 1px solid;"></img><br><br><img src="img/phone_cendrol.jpg" style="width: 100%; border-bottom: rgb(134, 134, 134) 1px solid;"></img></div>
