@@ -1,0 +1,340 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+      <meta charset="utf-8">
+      <link rel="shortcut icon" href="img/Artbor.png" />
+      <title>nkhlnmwt</title>
+      <link rel="stylesheet" href="https://use.typekit.net/kdn1bvr.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700;1,800;1,900&family=Spectral:ital,wght@0,200;0,300;0,600;0,700;1,200;1,300;1,600;1,700&display=swap" rel="stylesheet"> 
+    
+    
+    </head>
+    <style> 
+    
+    
+    #navbar {
+    background-color: rgba(255, 255, 255, 0.795);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: block;
+    transition: top 0.3s;
+    }
+    
+    #navbar a {
+    width: 12.3vw;
+    float: left;
+    display: block;
+    color: #6136c4;
+    text-align: center;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    text-decoration: none;
+    font-size: 1vw;
+    letter-spacing: 0.3vw;
+    }
+    
+    #navbar a:hover {
+    background-color: rgb(248, 240, 255);
+    color: rgb(89, 44, 194);
+    font-style: italic;
+    }
+    @media only screen and (max-width: 600px) {
+    .example {background: red;}
+    #navbar {
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: block;
+    transition: top 0.3s;
+    }
+    
+    #navbar a {
+    width: 23.3vw;
+    float: left;
+    display: block;
+    color: #6136c4;
+    text-align: center;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    text-decoration: none;
+    font-size: 1.8vh;
+    letter-spacing: 0.3vw;
+    }
+    
+    .container {
+    margin: 8px;
+    display: grid;
+    grid-template-columns: 10fr 10fr 0.1fr ;
+    grid-template-rows: 22vw auto auto auto;
+    grid-gap: 1.5vw 1.5vw; 
+    border-top: 1px solid rgb(145, 145, 145);  
+    padding-top: 6vh;
+    padding-bottom: 6vh;
+    }
+    .cell {
+    color: rgba(0, 0, 0, 0);
+    font-size: 2.4vh;
+    }
+    .cell-1 {
+    background: rgb(255, 255, 255);
+    }
+    .cell-2 {
+    background: rgba(255, 68, 0, 0)255, 255);
+    }
+    .cell-3 {
+    background: rgb(255, 255, 255);
+    grid-row: 1; 
+    grid-column: 3; 
+    }
+    .cell-4 {
+    color: rgb(0, 0, 0);
+    grid-row: 1; 
+    grid-column: 1; 
+    }
+    .cell-5 {
+    background: rgb(255, 255, 255);
+    grid-row: 1; 
+    grid-column: 2; 
+    height: 15vw;
+    }
+    .cell-6 {
+    background: rgba(50, 205, 50, 0)255, 255);
+    
+    }
+    .cell-7 {
+    background: rgba(255, 255, 255, 0);
+    
+    }
+    .cell-8 {
+    background: rgb(255, 255, 255);
+    grid-row: 2; 
+    grid-column: 3; 
+    }
+    .cell-9 {
+    font-size: 2.2vh;
+    font-family: spectral, serif;
+    color: black;
+    grid-row: 4; 
+    grid-column: 1;
+    font-weight: 400;
+    }
+    .cell-10 {
+      color: black;
+      grid-row: 4; 
+    grid-column: 2;
+    
+    background: rgba(255, 255, 255, 0);
+    font-size: 1.2vw;
+    font-family: "spectral", georgia, serif;
+    }
+    
+    .cell-11 {
+    background: rgb(110, 187, 117);
+    
+    }
+    
+    }
+    @media only screen and (min-width: 600px) {
+    .example {background: blue;}
+    
+    .container {
+        margin: 2rem;
+    display: grid;
+    grid-template-columns: 10fr 10fr 0.5fr 10fr 10fr;
+    grid-template-rows: 12vw auto;
+    grid-gap: 1.5vw 1.5vw; 
+    padding-top: 6vw;
+    padding-bottom: 6vw;
+    border-top: 1px rgb(182, 182, 182) solid;
+    
+    }
+    .cell {
+    color: rgb(0, 0, 0);
+    }
+    .cell-1 {
+    background: rgba(255, 255, 255, 0);
+    }
+    .cell-2 {
+    background: rgba(255, 255, 255, 0);
+    }
+    .cell-3 {
+    background: rgba(255, 255, 255, 0);
+    
+    }
+    .cell-4 {
+      background-color: white;
+    font-size: 1.7vw;
+    style="font-family: georama, sans-serif;
+    font-weight: 700;
+    }
+    .cell-5 {
+    background: rgba(255, 255, 255, 0);
+    }
+    .cell-6 {
+    background: rgba(255, 255, 255, 0);
+    }
+    .cell-7 {
+    background: rgba(255, 255, 255, 0);
+    }
+    .cell-8 {
+    background: rgba(126, 126, 126, 0);
+    }
+    .cell-9 {
+      background-color: white;
+    font-size: 1.2vw;
+    font-family: "spectral", georgia, serif;
+    line-height: 1.8vw;
+    font-weight: 300;
+    padding-top: -15px;
+    
+    
+    }
+    .cell-10 {
+    background: rgba(255, 255, 255, 0);
+    font-size: 1.2vw;
+    font-family: "spectral", georgia, serif;
+    }
+    } 
+    
+    /* Medium devices (landscape tablets, 768px and up) */
+    @media only screen and (min-width: 768px) {
+    .example {background: blue;}
+    
+    .container {
+    display: grid;
+    grid-template-columns: 10fr 10fr 0.5fr 10fr 10fr;
+    grid-template-rows: 12vw auto;
+    grid-gap: 1.5vw 1.5vw; 
+    padding-top: 6vw;
+    padding-bottom: 6vw;
+    border-top: 1px rgb(182, 182, 182) solid;
+    
+    }
+    .cell {
+    color: rgb(0, 0, 0);
+    }
+    .cell-1 {
+    background: rgba(255, 255, 255, 0);
+    }
+    .cell-2 {
+    background: rgba(255, 255, 255, 0);
+    }
+    .cell-3 {
+    background: rgba(255, 255, 255, 0);
+    
+    }
+    .cell-4 {
+      background-color: white;
+    font-size: 1.7vw;
+    style="font-family: georama, sans-serif;
+    font-weight: 700;
+    max-width: 20vw;
+    }
+    .cell-5 {
+    background: rgba(255, 255, 255, 0);
+    }
+    .cell-6 {
+    background: rgba(255, 255, 255, 0);
+    }
+    .cell-7 {
+    background: rgba(255, 255, 255, 0);
+    }
+    .cell-8 {
+    background: rgba(126, 126, 126, 0);
+    }
+    .cell-9 {
+      background-color: white;
+    font-size: 1.2vw;
+    font-family: "spectral", georgia, serif;
+    line-height: 1.8vw;
+    font-weight: 300;
+    padding-top: -15px;
+    
+    
+    }
+    .cell-10 {
+    background: rgba(255, 255, 255, 0);
+    font-size: 1.2vw;
+    font-family: "spectral", georgia, serif;
+    }
+    } 
+    
+    </style>
+    <body>
+      <div id="navbar" style=" font-family: georama, sans-serif; box-shadow: 1px 0.5px 2px rgb(219, 219, 255);">
+        <a href="about.html" >ABOUT ME</a>
+          <a href="Resume_Nikhil.pdf" target="_blank" >RESUME &#8594</a>
+  
+        </div>
+      <!--
+      <div class="container" style="font-family: georama;">
+          <div class="cell cell-1">1.</div>
+          <div class="cell cell-2">2.</div>
+          <div class="cell cell-3"></div>
+          <div class="cell cell-4" style="font-family: 'georama',sans-serif;">4. title of the thing</div>
+          <div class="cell cell-5" ><img style="width: 30%;" src="img/stamp.svg"></img></div>
+          <div class="cell cell-6">6.</div>
+          <div class="cell cell-7">7.</div>
+          <div class="cell cell-8"><div style="border-left:  1px rgb(184, 184, 184) solid; height: 110%; margin-top: -13.5vw;"></div></div>
+          <div class="cell cell-9">9. This poster and the one on the next page were made as a part of the marketing campaign for a co-working space “Work365”. Work365 told me that they feel that other co-working spaces are offering too many side activities which don’t really contribute to working, and they want to target people who think the same and want to get work at a place that is more invested in improving their work, like taking care of ample space for desks. The illustration is showing the extra-activities occupying all the space that it is being a barrier for the person with the laptop to do work. </div> 
+          <div class="cell cell-10">10.</div> 
+          <div class="cell cell-11" style="height: 0vw;"> </div> 
+        </div>
+        <div class="container" style="font-family: georama, sans-serif;">
+          <div class="cell cell-1" style="color:rgb(184, 184, 184)">1.</div>
+          <div class="cell cell-2">2.</div>
+          <div class="cell cell-3">3.</div>
+          <div class="cell cell-4" style="font-family: 'georama',sans-serif;">title of the second thing</div>
+          <div class="cell cell-5">5.</div>
+          <div class="cell cell-6">6.</div>
+          <div class="cell cell-7">7.</div>
+          <div class="cell cell-8">8.</div>
+          <div class="cell cell-9">9.</div> 
+          <div class="cell cell-10">10.</div> 
+          <div class="cell cell-11" style="height: 0vw;"> </div> 
+        </div>
+      -->
+    <!--here's where the real stuff starts-->
+    <div class="container" style="font-family: georama; padding-bottom: 1vw;">
+        <div class="cell cell-1" ></div>  
+      <div class="cell cell-2" style="height: 7vw;"></div>
+      <div class="cell cell-3"></div>
+    <div class="cell cell-4" ></div>  
+      <div class="cell cell-5" style="height: 7vw;"></div>
+      <div class="cell cell-6"></div>
+      <div class="cell cell-7"></div>
+      <div class="cell cell-8"><div style="border-left:  1px rgb(255, 255, 255) solid; height: 110%; margin-top: -13.5vw;"></div></div>
+      <div class="cell cell-9" style="margin-top: -10vw;">Portfolio. <em>Design & Illustrations</em><br>
+        Hi, I'm Nikhil Nimawat. I've been working as a designer and an illustrator. Currently working as a Product Designer at Niro.<br>
+        <br>
+        → <a href="http://www.nimawat.com/design.html">Design</a>   → <a href="http://www.nimawat.com/illustrations.html">Illustrations</a>
+
+        </div> 
+      <div class="cell cell-10"></div> 
+      <div class="cell cell-11" style="height: 0vw;"> </div> 
+    
+    </div>
+    
+    
+          <!--here's where the 2nd real stuff starts-->
+      
+    </body>
+    
+    <script>
+      var prevScrollpos = window.pageYOffset;
+      window.onscroll = function() {
+      var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+          document.getElementById("navbar").style.top = "0";
+        } else {
+          document.getElementById("navbar").style.top = "-5vw";
+        }
+        prevScrollpos = currentScrollPos;
+      }
+      </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script><script  src="./script.js"></script>
+    
+  
