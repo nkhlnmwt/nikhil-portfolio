@@ -402,10 +402,13 @@ h3{
 a {
   text-decoration: none;
   color: #3D00B1;
+  font-family: 'open sans', roboto, pt sans, sans-serif;
 }
 
 a:hover{
   font-style: italic;
+  background: rgb(255, 255, 151);
+
   
 }
 
