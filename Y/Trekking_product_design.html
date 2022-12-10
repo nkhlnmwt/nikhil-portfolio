@@ -1,0 +1,715 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Trekking product design</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+	font-size: 1.3em;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: 'spectral', ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body>
+	</div><article id="02de779b-06a8-496f-80d2-1128184e1dde" class="page sans"><a href="design.html" style="font-family: Ideal Sans A,Ideal Sans B,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji; color: rgb(84, 56, 147);">← Home <br></a> <header><h1 class="page-title">Trekking product design</h1><table class="properties"><tbody></tbody></table></header><div class="page-body"><hr id="f18adeeb-7ddb-449f-aaff-3fd3b7fdb637"/><div id="3fb79177-740f-4dee-9727-de6ccee7a8e4" class="column-list"><div id="682aef70-35f5-46d1-a78d-8ee6fa41dcba" style="width:25%" class="column"><figure id="0a7f75b7-cf88-4279-9515-868a3b2debf9" class="image"><a href="Trekking%20product%20design%200a7f75b7cf8842799515868a3b2debf9/padding.png"><img style="width:1242px" src="Trekking%20product%20design%200a7f75b7cf8842799515868a3b2debf9/padding.png"/></a></figure></div><div id="04dd3a3a-ee88-4e68-b2e2-787df7934cac" style="width:75%" class="column"><h3 id="5eb8b7f0-c324-4157-8963-1211493e5f48" class="">Detailed process of making an Adventure travel app.</h3><p id="c30ab6a5-0226-4c09-a462-8ceb0bf7a902" class=""><em>here’s the story of how I designed an app in the adventure travel domain. It was done without any constraints, except that the brief can’t change. and the brief</em>* was to make something around the “adventure travel” industry, so as to explore my own design process.*</p><p id="6ff1c0b2-7c3e-4481-8f95-23e0821612b0" class="">This process took a long time, so instead of going through stuff one by one, let me first talk about the overarching journey, then we can go and look some highlights in details one by one.</p><p id="363c914c-41ae-4f36-b1cd-f59afbf84894" class="">I’ve divided this case study into 3 parts:</p><ol type="1" id="a37fad0d-8ebe-4874-b7e3-8de571ebbc75" class="numbered-list" start="1"><li><strong>Meta story: </strong>overarching story, to understand the process, and the gist of the project. This is also kept here because the whole article is quite long.</li></ol><ol type="1" id="93195cac-0e94-4d3f-a646-51a519a8f614" class="numbered-list" start="2"><li><strong>3 highlights: </strong>then we are gonna zoom into the details of how I found people to talk to and a look into their problems.</li></ol><ol type="1" id="03612b09-2ac8-4daf-8509-7b37fc91886f" class="numbered-list" start="3"><li><strong>Solution</strong>: finally we’ll look at the final solution and wireframes in details.</li></ol><h3 id="6adebb5e-b590-47ac-8e41-dad58c6458ab" class="">1. META STORY</h3><p id="03357f0e-fa0f-4772-9d6d-387d84c7063f" class="">Let’s look at the following 4 images.</p><p id="697a168b-75f5-4989-97d1-4ba68182fcf1" class="">
+</p><p id="118339e0-800c-412f-9ff3-bb8e34f23be4" class=""><strong>1. This image shows the design process I went through while making this project: you can look at this whole map in detail on this link: </strong><strong><a href="https://www.figma.com/file/G2Cvl1Laor0XOm38rdXaDx/Trekking-product">Big Trekking product figma file</a></strong></p></div></div><figure id="5de3dedb-43dd-4f9d-a10c-641405bd4e29" class="image"><a href="https://cdn-images-1.medium.com/max/1600/0*8cjAQiR0vO-nzsE9"><img src="https://cdn-images-1.medium.com/max/1600/0*8cjAQiR0vO-nzsE9"/></a></figure><p id="99a5bd83-f759-45b0-8e40-72410ead5741" class=""><em>This is a map of everything that was done during the project. You can just read the 6 titles in order to get some context.</em></p><div id="f0bcd39a-aa5d-46eb-9e6c-42f786c0f60a" class="column-list"><div id="31c7ec40-7f52-43c3-9047-d0e24a150deb" style="width:18.75%" class="column"><figure id="54204a05-6937-4be3-8881-b2eb182a4534" class="image"><a href="Trekking%20product%20design%200a7f75b7cf8842799515868a3b2debf9/padding.png"><img style="width:192px" src="Trekking%20product%20design%200a7f75b7cf8842799515868a3b2debf9/padding.png"/></a></figure></div><div id="c5d404af-3ce2-46b2-bd51-6fb7adac4e6d" style="width:81.25%" class="column"><p id="6cf359a2-e85c-40b7-8718-f9dfc027ca2a" class=""><strong>2. Image showing zoomed out version of the image above. The work involved everything from </strong><em><strong>interviewing people, </strong></em><strong>to</strong><em><strong> writing up solutions ideas, </strong></em><strong>to</strong><em><strong> UI design.</strong></em></p><p id="3bb467fc-c9d6-438e-a8db-70227b8f705f" class=""><em>Caption: you probably know this by now, but let me repeat it. </em><em><strong>The image on the left </strong></em><em>is from user interviews I was taking of people who’ve recently gone on a trek. And </em><em><strong>image on right </strong></em><em>is a screenshot from the time I wa working on UI.</em></p></div></div><div id="9dc7f240-bbaf-4e64-a373-87d8b4467e42" class="column-list"><div id="99877f11-0869-4c81-95a7-c2b577deb7ba" style="width:43.75%" class="column"><figure id="55ee9089-a5d1-4bad-9ba2-0aad1861e829" class="image"><a href="https://cdn-images-1.medium.com/max/1600/0*etXvH7g1sG1tSkqt"><img src="https://cdn-images-1.medium.com/max/1600/0*etXvH7g1sG1tSkqt"/></a></figure></div><div id="19a341b9-0206-4dd4-91ec-ba60fdf18dde" style="width:56.25%" class="column"><figure id="623d4544-88b5-4758-beb4-e5052e48958b" class="image"><a href="https://cdn-images-1.medium.com/max/1200/0*CM5z5hPxoE1Z5GaJ"><img style="width:432px" src="https://cdn-images-1.medium.com/max/1200/0*CM5z5hPxoE1Z5GaJ"/></a></figure></div></div><div id="8ce3b639-a24e-4e4a-b5fe-78d643674185" class="column-list"><div id="b95bae7f-57e6-453c-a958-5fec1636b200" style="width:18.75%" class="column"><figure id="ea2f26a7-080b-4844-a6c3-fb7e28d4cd7c" class="image"><a href="Trekking%20product%20design%200a7f75b7cf8842799515868a3b2debf9/padding.png"><img style="width:60px" src="Trekking%20product%20design%200a7f75b7cf8842799515868a3b2debf9/padding.png"/></a></figure><p id="c6d6f550-a748-4cf7-8c51-3131cacee9bb" class="">
+</p></div><div id="cce725b5-b3e7-4580-b015-4df75592050d" style="width:81.25%" class="column"><p id="c4878d72-50ad-416e-a4c5-30043265d706" class="">
+</p><p id="d63a6d4b-07b3-4233-af28-221887e1a8b5" class="">
+</p><p id="c4313ab3-6651-44dc-81d8-024660b91e7d" class="">
+</p><p id="c3464672-5761-4a4b-b0d1-70ab0a7bf22c" class="">
+</p><p id="681eb9eb-159b-42c6-b339-f1fec038bae0" class="">
+</p><p id="b9a43d77-6d38-45d2-ae6b-ca0b35a80aaa" class=""><strong>3. ⭐️ </strong>and here’s <strong>the most important story </strong>that’s happening here. It’s the map explained.</p></div></div><figure id="ab9b55d7-3e78-41c7-9240-d332a6392bac" class="image"><a href="https://cdn-images-1.medium.com/max/1600/0*UzZ6qN16W783yGSn"><img style="width:816px" src="https://cdn-images-1.medium.com/max/1600/0*UzZ6qN16W783yGSn"/></a><figcaption><strong><em>I recommend you open this image and read points A to G</em></strong></figcaption></figure><div id="1ba1a8b8-cff0-4cc6-9e3e-21dfe7a331cd" class="column-list"><div id="c3c82966-460e-4f85-9074-6e56bd8fd40c" style="width:18.75%" class="column"><figure id="339a91d9-08f6-42fb-9ed6-cd8dfaf2f573" class="image"><a href="Trekking%20product%20design%200a7f75b7cf8842799515868a3b2debf9/padding.png"><img style="width:1242px" src="Trekking%20product%20design%200a7f75b7cf8842799515868a3b2debf9/padding.png"/></a></figure></div><div id="805ecde5-e5c9-4559-abfa-01c0548936eb" style="width:81.25%" class="column"><p id="8a9f5956-45c5-4c67-822d-3db3bbd7b42d" class="">
+</p><p id="2301a346-698d-418c-aefc-7094d223d62d" class="">This is what the summary of this is about. Now in the next sections we’ll do two things:</p><ul id="6884f324-1d68-4dc3-83e0-7f534ffac9a3" class="bulleted-list"><li style="list-style-type:disc">1. we’ll see highlights from the whole app.2. Finally we’ll see the app that I designed, as the solution.</li></ul><h3 id="8b5950c4-03db-4950-96f3-94279a472d0f" class="">2. Three highlights from the story</h3><p id="66014634-1800-4346-8285-4945995dd686" class="">Let’s zoom the map, and look at</p><h3 id="a4cc4612-da3e-432e-9e84-d350c53eb9af" class="">2.1. Selected highlights from the process</h3><p id="bc7377e5-568d-4b76-8dde-9f71df4202a2" class=""><strong>Highlight1</strong>: RESEARCH. or Desk-research+interviews+journeyMaps. or How Indiahikes people helped me make the user journey map.</p><p id="81caa0f2-908e-4388-9db8-8e9575cf0cc5" class=""><em>interviewing people,</em></p><p id="28f1c7e9-b423-4933-8ab2-5cc2b8b483f5" class="">I started by searching for how they earn money, looked at a bunch of researchers, in hopes to better understand their business model, and to look at how other people are solving this problem. What’s the difference between a trek and hiking?</p><p id="05868c74-a9e7-4372-bf41-bcaf755a2da5" class="">some findings were very particular to very rich countries. There were also some insight that are relevent to our app. I’ve kept some of those insights here. dpcd</p><p id="9952dcd2-cb58-41e3-81fb-079016ecb139" class="">But soon I understood, that it will be very important to talk to people who’ve recently gone on trips. and also the organisers. ended up talking with</p><ol type="1" id="06d3e44b-13b3-4de2-acb9-f8be4d8102cc" class="numbered-list" start="1"><li>Pragya, 28, used to live in canada, going on her first trek.</li></ol><ol type="1" id="24d23c6b-94a9-4511-b4dd-fde59cf4670d" class="numbered-list" start="2"><li>Ansh, 23.</li></ol><ol type="1" id="e6d4cfa8-8625-4b9c-b94f-2aae27418353" class="numbered-list" start="3"><li>Madhusudan, 40, from Bangalore, had gone on a bunch of treks before.</li></ol><p id="5ee9a1ed-3ff3-4866-8b4d-7b2d427c011a" class="">All of these folks, either didn’t prepare their body before going on the trek. some because they just didn’t try, and because they felt they didn’t need to. pragya wished if there was a way to filter all the treks better, Ansh told that he goes on the treks for getting away from society. Madhu also does the same, he’d gone on the trek for (you can read in details in the figma file.)</p><p id="ed22d98e-963e-4106-afdf-be239bedecbe" class=""><strong>ok, so many of these probelms are easily solvable. what are trek companies doing about it.</strong></p><p id="98e51f82-0cbb-4f77-8510-bacf3ede31fd" class="">With that in mind I searched for the trekking companies nearby,</p><p id="db62c9f6-6bc0-4df0-9864-1f8e27f1e78b" class="">some companies came up,</p><p id="136b0746-5880-438f-948d-7c94f6f930a9" class="">some travel agents came up,</p><p id="38d4cf6b-4036-43e5-87b8-4f5809740b96" class="">Called the nearby travel agents to better understand how this happens. And it seemed like they don’t really provide a whole trekking experience. But one company stood out, it was <strong>Indiahikes</strong>,</p><p id="0d49623f-a47f-455e-9c38-64c2973ddc4f" class="">but before that I did more reseach about them, their website, their youtube videos, found a ted talk by their founder, it was inspiring, it talked about the transcendence you get by trekking. he also mentioned that they have an office in bangalore.</p><p id="f5ece74b-7a32-4de6-883c-93c2523ac0f6" class="">They have an amazing website and I knew it would be a goldmine if I get to talk to these folks, But I also knew that I won’t be able to get any of that information out of a phone call.</p><p id="845a786b-80ec-46e5-a5fa-c9eb7a5234ab" class="">So, I revised on my researching concept, looked at the notes from the time Koel, taught us about UX research. And made a strategy to about what I’ll talk to them.</p><p id="0fc8d04b-9180-4672-b49b-c6b776815f8d" class="">
+</p><p id="229775c9-814c-4b45-90f9-5fe99fe80ffe" class="">Finally I boarded on the metro, and reached their office.</p><p id="8a9c28e0-763a-47c6-a9cf-1f95179d3a1a" class="">I went to the Indiahikes office in the metro</p></div></div><div id="70fc0dff-ff3c-4cda-ac16-2d4bbc368ecc" class="column-list"><div id="6dd17ac4-81be-4864-bae9-7459e95155b0" style="width:50%" class="column"><figure id="3bd0dac3-7099-4a9f-9756-63db11d2f84b" class="image"><a href="https://cdn-images-1.medium.com/max/1200/0*hWSGZUeGyl127X3a"><img style="width:432px" src="https://cdn-images-1.medium.com/max/1200/0*hWSGZUeGyl127X3a"/></a></figure></div><div id="bdf2dd0c-38c1-4856-9152-048d71826821" style="width:50%" class="column"><figure id="752e310c-aa9a-4d2f-8dcf-bff83ff8e0c1" class="image"><a href="https://cdn-images-1.medium.com/max/1600/0*nxNNW8QITr0_g0Dr"><img src="https://cdn-images-1.medium.com/max/1600/0*nxNNW8QITr0_g0Dr"/></a></figure></div></div><div id="3fd50a9c-cd98-4876-b560-f122718122a3" class="column-list"><div id="3528fecf-409b-4a06-9b55-ea17c16e56bd" style="width:18.75%" class="column"><figure id="3a80a0ac-edc7-4737-a6b1-3c0c4c0e9918" class="image"><a href="Trekking%20product%20design%200a7f75b7cf8842799515868a3b2debf9/padding.png"><img style="width:288px" src="Trekking%20product%20design%200a7f75b7cf8842799515868a3b2debf9/padding.png"/></a></figure></div><div id="73d4a499-5e71-4e0b-ade9-e3e7e32a968f" style="width:81.25%" class="column"><ul id="b134c1fe-3f42-4dcb-9529-fb120cd0ea57" class="bulleted-list"><li style="list-style-type:disc">— in the metro, I went to their about us page, and memorised the names of some of the people working there. — the security gaurd stopped me, so I told that I’m here to meet my Arjun. he took me to arjun’s office, he was talking to someone, so we had to wait, and in this waiting time, i started talking to some other folks in the open area of the office, — I spotted a very nicely dressed man, and shook his hand firmly, and told him that I am from a group, which wants to design something for them, and for that I’ll have to talk to the fold from the EC team (experience coordinator) — he said he can help me with that, and took me to the head of the team, and told him that he wants to ask some questions for 10 minutes. — I think by that time, the security gaurd understood what I was doing there, but didn’t say anything.</li></ul><p id="14b102d0-3449-4f67-ac9f-6ff8b82f050c" class="">Great, now I had the 10 minutes with the, who basically is like the experience designer for the treks.</p><p id="e580fb78-da2c-442d-86e2-78db1d10acfc" class="">
+</p></div></div><figure id="55d759bf-ca0e-41f8-a40f-1ec8c9e6c0da" class="image"><a href="Trekking%20product%20design%200a7f75b7cf8842799515868a3b2debf9/Screenshot_2022-09-11_at_7.40.43_PM.png"><img style="width:576px" src="Trekking%20product%20design%200a7f75b7cf8842799515868a3b2debf9/Screenshot_2022-09-11_at_7.40.43_PM.png"/></a></figure><div id="9916373f-0c9b-4aea-a369-9843bdeb4163" class="column-list"><div id="0b59aada-abb8-4fa0-a6dc-b1d588282708" style="width:31.25%" class="column"><figure id="b34d39e6-cc46-461d-95a1-5fb51c1e7dd2" class="image"><a href="Trekking%20product%20design%200a7f75b7cf8842799515868a3b2debf9/padding.png"><img style="width:192px" src="Trekking%20product%20design%200a7f75b7cf8842799515868a3b2debf9/padding.png"/></a></figure></div><div id="e4efe121-2afd-4ff4-aa03-1117d92c088e" style="width:68.75%" class="column"><p id="34a1ecce-d02a-4fa4-8579-886f3c368320" class="">Ok, so my task here was to earn his trust, so he talks about the deeper problem of the work.</p><p id="ca8d4da5-7a1f-4a12-a64f-f9be06b9c0b1" class="">— i decided to be vulnerable there, I passionately **explained the importance of a user journey map,**, where I’m stuck and that we are targeting people going for 2–5 day trek — and then I went quite, let him speak, even if he was not telling what I wanted, I didn’t interrupt.</p><p id="4479cc71-d0e5-43c5-8025-0058265cb288" class=""><strong>— **Insights from our conversation:**</strong></p><p id="090ab8af-885b-4a62-b2cb-93346568d4e2" class="">1. How does one decide to go on a trek?</p><p id="3b6512f2-732d-46a6-902e-5ce52f425ded" class="">ans: they just go: movies, instagram, close relative went on a trek — and now they want others to experiecne that.</p><p id="dfe50222-fc1b-41c8-9dd3-8e681155c002" class="">2. Do people come in groups? how does that group form amongst them?</p><p id="1b2631e6-677f-412f-b908-2d16f5782d7b" class="">ans: Ayush said 60–70% people people come alone, no group. the rest of the group, either gets created with people who they’ve gone on trek with.</p><p id="4dae3202-6a3f-4b49-aaf0-6df9aaa76e54" class="">
+</p><p id="e6ad600c-9bc9-4587-b778-c35a2ea55d30" class="">— the group size rarely exceeds 3 people.</p><p id="90364d90-d28d-4ba6-9424-9c5195d6a5ee" class="">
+</p><p id="bea6cb92-c822-44b1-afd0-ad50218fe245" class="">3. Do people come with the preparation?</p><p id="466c7ef8-9c6a-4d1d-9140-3c1ebc7a8520" class="">
+</p><p id="5c11703c-5c29-4dd9-b99c-15ec1113f042" class="">— they usually don’t, so they are called by EC’s (Experience coordinators there, to keep track of their journey and their journey.)</p><p id="55b1b94b-c8e6-4565-8d51-1c03da8e1cbd" class="">— ECs check their progress using the Nike app.</p><p id="12a5acaa-c431-4db8-85ac-85cb469f2163" class="">4. Ayush talked about how they try to reduce people who don’t exercise, and people who throw out a bunch of garbage on the treks.</p><p id="03736286-c17c-4f5e-83ff-c920d7fc9a8d" class="">
+</p><p id="5ccbdc07-16f5-4b06-96ea-297cd8aad949" class="">5. he talked about something called a Deloading probelm. A deloading problem is where people take up a lot of stuff, and then since they can’t carry it, or are not prepared well, they end up de-loading their bags, to the Mules nearby. and how this becomes a problem. this robs them of the full experience.</p><p id="fcfa21b3-585f-4f36-8968-47a22dc4b381" class="">
+</p><p id="acb92f26-be2a-41c2-a61b-f3d54ff9faca" class="">6.- He then went on to talk about how Indiahikes solved this problem by making the UI of the website such that it becomes harder for them to select the deloading option. — this cost them money, as they might have lost a bunch of traffic from people who were only interested in trekking if they could deload, but they still did this, because, he says that it aligns with their brand, it aligns with their values. he said now we had people who all cared about preparation, and fitness.</p><p id="3b1d0b34-46c9-4a82-a857-3aa4d763de0d" class="">
+</p><p id="aec8d123-0762-47ed-b859-075f2bfb624d" class="">7.- He emphasised the importance of the transcendent experience one gets when they do the adventure travel, and how it is a chicken and an egg problem that they can’t explain it to someone who hasn’t been trekking before. but they only need to know it the most.</p><p id="68e79d69-f59a-4b4c-bfa6-3013b60e802f" class="">
+</p><p id="7706e87f-f679-4f4a-b9fb-fae333d72ebc" class="">8.- He mentioned that their core values are: safety, communicating that this is a sport, do the right thing, and be humble.</p><p id="0b8dc6df-d481-4b54-bda8-be5447564218" class="">
+</p><p id="6a35d466-5b58-426b-bfdf-9c4838353b94" class="">— they provide info about how to come from nearest airport to the trek.</p><p id="44600df5-6ed2-4bfa-8be9-ad21240c9a34" class="">
+</p><p id="d74a392e-f9ad-4c4d-aadd-b66f94d40068" class="">— other than this, I also got introduced to a bunch of trekking-industry-jargon, like AMS, Slope, ECs</p><p id="b64a5c5c-b123-4ee2-bdcc-febfc3316bf4" class="">
+</p><p id="bbca8015-43c5-4f68-9db5-26973e76fbca" class="">I’m really thankful to Ayush and Ganesh to sit with me for such long sessions and give out details about the whole experience.</p><p id="c5ae23d6-b346-4512-a372-389a2546c04c" class="">**Thanks only to them that i could make a proper user journey**.</p><h3 id="16986b30-6a5d-4361-95af-8be2c58baf99" class="">2.2. Highlight2, People don’t exercise before. How do we solve that?</h3><p id="b85c4bdd-d5f4-400f-b9bf-ee27883d05e6" class="">I want to start by 3 datapoints we got from the research:</p><p id="ae9c980b-0b7f-4d36-a97d-a8e588e75549" class="">
+</p><p id="b16ec4f6-370a-4f39-85fb-cd289ef26917" class="">Most of the first time trekkers i interviewed did not do any physical training to prepare. (pragya and Madhuranath)</p><p id="18ae41e0-3f72-40cf-8ab4-18b541134e49" class="">
+</p><p id="87347ee6-91cc-4290-9055-661ccba127d9" class="">While talking to ansh, I also found that, one time he and 3 of his friend were going on a trek and one of the person, was not couldn’t continue the trek, so they had to back up.</p><p id="405a6c51-f19e-4d24-a0c2-4757fb1fdf6b" class="">
+</p><p id="5eeef6e4-ee64-4b3c-87dc-39d683a9ebe9" class="">We also saw the lengths indiahikes goes to in order to avoid the people who are not prepared.</p><p id="9ce99a5f-b8f1-47fa-9070-3c96ba666eca" class="">
+</p><p id="aede6b58-677a-4dd9-b79e-75acd6330cb7" class="">Ayush (from indiahikes team), kept mentioning how people are not able to fully experience the trek if they have not trained for it previously.</p><p id="920a4eb4-da56-4d1e-9df9-65b6b8104245" class="">
+</p><p id="e35eb701-a639-47ae-95ed-c01cf9cb9f02" class="">so we see that physical fitness is of huge importance. Then why do people not do it? I asked people and here are their answers.</p><p id="341f6ad1-9f48-46ec-b433-ee25c9b04380" class="">they don’t know what to do — they don’t want to plan another thing when they are infact doing the trip to get away from schedules (Friction) — They think that since they do this exercise they’ll loose their muscle that they’ve gained — they feel emasculated doing exercise — they don’t think there’s a need to.</p><p id="119df08b-7466-4bf7-b4fd-23447de4e876" class="">
+</p><p id="0fb9338b-199a-4252-9b63-3137f9c58cd6" class=""><strong>how did we solve this?</strong></p><p id="52a20b46-38fe-4d84-9a99-0a9b0119e64b" class="">Before I answer how we can solve this fitness problem, let me talk about a broader problem that we are solving here. solving it will not just help us for this problem, but also the problem described in highlight3. it’s important to talk about that first because it partially solved the fitness problem as well.</p><p id="d376ae93-cf08-404e-a9d5-9d5a6f58edb6" class="">Ok, so I decided that all the communication that will promote/mention this app, will present it as “<strong>a minimum checklist, that this is the app that will only help you prepare for the things that are necessary for the app.</strong>”. I had made a JTBD for the same, although I couldn’t get a lot out of it, but one thing that stood out was that peopel don’t want to think about what should they do.</p><p id="679731fb-370a-48c9-8f5f-d5026d524c1e" class="">— now the reason for that is because people end up feeling FOMO, they’d watch many youtube videos on trekking, and still won’t feel that they are missing out. — a second reason is the friction, not knowing what to pack, what workouts to do. further, not knowing what is essential, and what’s not essential, endless youtube videos don’t help with them either.</p><p id="75ac1a31-9991-4f00-bec3-8d0d8203cb68" class="">So, if we place our ads correctly, we will be able to <strong>latch on to the FOMO nerve here, we’ll be able to tell them that hey, there’s a solution</strong>.</p><p id="474cbdfa-e48f-46f0-a0b4-bc557b09516c" class="">so now we have this “minimum checklist/minimum training app”. (<em>we’ll see the app later</em>). Now that people have this context that this is the app, which tells us the essential-things-only, they can give peace to their FOMO. (so one problem solved)</p></div></div><figure id="f8531dd0-6723-46bd-996b-c8acfb7c5851" class="image"><a href="https://cdn-images-1.medium.com/max/1600/0*tlKY3qkhI0u3nYZ2"><img style="width:768px" src="https://cdn-images-1.medium.com/max/1600/0*tlKY3qkhI0u3nYZ2"/></a></figure><div id="f50dd316-1efa-46e6-954c-067c68162a78" class="column-list"><div id="22d0dcac-d8c1-48dd-ba37-854362eae51d" style="width:25%" class="column"><figure id="a95349e9-3d6f-4270-99b3-0dcd525f7bbc" class="image"><a href="Trekking%20product%20design%200a7f75b7cf8842799515868a3b2debf9/padding.png"><img style="width:192px" src="Trekking%20product%20design%200a7f75b7cf8842799515868a3b2debf9/padding.png"/></a></figure></div><div id="6efd3257-f4f3-4fdf-a977-9ffcd717039a" style="width:75%" class="column"><ul id="f5540d86-fa8b-484a-bc2a-58fb3367cb76" class="bulleted-list"><li style="list-style-type:disc">Now, how do we initiate people to do more exercise? — for someone who already uses a workout app like curefit, we provide ways to insert trekking training in there as well. — roughly by talking their language. (<em>for the gym guy</em>: you’ll be able to maintain your muscle if you prepare for training, <em>for the couch potato</em>: hey, these are only the least amount of exercises) — by talking to the extreme ends of the spectrum, and everyone in the middle will be convinced. (<strong>talk to the gym rat and talk to the person who doesn’t want to move</strong>) — By telling them what will happen to them if they don’t do the workout.</li></ul><ul id="0c04b344-9fb1-48cd-9d2f-b5f4b924c6d3" class="bulleted-list"><li style="list-style-type:disc">Finally what it looks like in the app (wireframe).</li></ul></div></div><ul id="ded9c32f-825d-43ce-8310-8b78b993a49e" class="bulleted-list"><li style="list-style-type:disc"></li></ul><figure id="767b1869-7079-4690-bc59-d462f1347a3a" class="image"><a href="https://cdn-images-1.medium.com/max/1600/0*bD_hudsE0fHcCkLo"><img style="width:384px" src="https://cdn-images-1.medium.com/max/1600/0*bD_hudsE0fHcCkLo"/></a></figure><p id="5844d180-176d-44ad-8d1f-65759c325274" class=""><em>this bar only shows up if their cohort folks have completed an amount that is coverable.</em></p><div id="8bb30e44-1e02-49d4-b736-f7e7ad3b68c8" class="column-list"><div id="c1a06d0d-e249-4f9e-9750-b7232bc43169" style="width:18.75%" class="column"><figure id="e8c093ed-de47-4efb-ad59-fd64f32729e9" class="image"><a href="Trekking%20product%20design%200a7f75b7cf8842799515868a3b2debf9/padding.png"><img style="width:192px" src="Trekking%20product%20design%200a7f75b7cf8842799515868a3b2debf9/padding.png"/></a></figure></div><div id="ad9ddd82-a58f-4a15-a989-63bf0e49c5d0" style="width:81.25%" class="column"><h3 id="c54a0fe2-7501-4d42-b63a-44bd24656c88" class="">2.3. highlight3: Discovery problem.</h3><ul id="ae95263c-6473-4026-8856-d5bf9935c8ab" class="bulleted-list"><li style="list-style-type:disc">As we saw in the previous section, one of the problems that Pragya mentioned was that she “Wishes there was a way to filter out different treks”  But indiahikes provides filters. Then why could this highly educated girl, someone who handles a whole business, can’t figure that out?  <strong>here’s what I think the reasons are</strong> a lot of companies, advertise for tickets when your search for treks, people don’t know if the word to use should be <strong>trek</strong>, or something else. — so they end up not being able to distinguish between, which sites book only the bus/train, and which ones are for booking the whole trek. — another reason is that a lot of these search results don’t really speak to the state of mind the person is in while searching these terms on google.</li></ul></div></div><figure id="c1a57b9e-19f5-402c-934b-35179b9de161" class="image"><a href="https://cdn-images-1.medium.com/max/1600/0*V6GlZj2ygxcP722l"><img style="width:672px" src="https://cdn-images-1.medium.com/max/1600/0*V6GlZj2ygxcP722l"/></a></figure><p id="d7de0f19-bb0c-4b26-9ee4-7e6f1041ba6a" class="">
+</p><div id="989c9fda-4cd2-47b1-86d7-9ee071745cff" class="column-list"><div id="a8547495-ab1d-4e03-8e3b-ab655ed40980" style="width:25%" class="column"><figure id="f86c4689-6519-40fb-b799-98d0eb5d0faf" class="image"><a href="Trekking%20product%20design%200a7f75b7cf8842799515868a3b2debf9/padding.png"><img style="width:192px" src="Trekking%20product%20design%200a7f75b7cf8842799515868a3b2debf9/padding.png"/></a></figure></div><div id="15dc867f-a93d-4757-b61b-5c7e6464479e" style="width:75%" class="column"><ul id="4f588433-8a3f-49ec-8dae-a0a483e95826" class="bulleted-list"><li style="list-style-type:disc"><strong>How did we solve this?</strong></li></ul><p id="0ffd2985-3fd7-4ca1-92a2-2b2e2c1143c3" class="">
+</p><p id="ae23bb11-f7df-4091-8f8e-1ee00b9409a3" class="">two ways. <strong>First</strong> By customising what shows up on google, based on what they searched.</p><p id="fc95b409-88c6-4c0a-90f7-482c25b1e392" class="">1. They searched “Kardkeri trips near me”, that means, they need to see two things: 1. that we have the trip planned available. 2. that indiahikes has done many trips there. and finally in the smaller text, some information about the price. Price is important to show because they are probably in the thinking whether they should go or not phase.</p></div></div><figure id="2cbf5fb4-152b-440d-9048-5bf5ceb73acc" class="image"><a href="https://cdn-images-1.medium.com/max/1600/0*LDxQhlah9KYM2n1r"><img style="width:672px" src="https://cdn-images-1.medium.com/max/1600/0*LDxQhlah9KYM2n1r"/></a></figure><div id="1672448d-98f5-4710-ae6b-24465ac39253" class="column-list"><div id="a807a476-190a-4be2-a156-ee5519252ba3" style="width:18.75%" class="column"><figure id="97f07978-a6da-41da-ad2a-67a5e31b18ee" class="image"><a href="Trekking%20product%20design%200a7f75b7cf8842799515868a3b2debf9/padding.png"><img style="width:192px" src="Trekking%20product%20design%200a7f75b7cf8842799515868a3b2debf9/padding.png"/></a></figure></div><div id="8d7d0911-90e0-4e3a-96c8-34786536aa80" style="width:81.25%" class="column"><p id="36c7ac34-118c-41c3-9359-9923f051460e" class="">2. if they search for Indiahikes, so maybe they know about the company, let’s try to introduce to them some other reason to get it.</p><figure id="005d3a95-4cb6-418d-b0eb-0c691264206e" class="image"><a href="https://cdn-images-1.medium.com/max/1600/0*mrWWm1IsHG34wkkm"><img style="width:672px" src="https://cdn-images-1.medium.com/max/1600/0*mrWWm1IsHG34wkkm"/></a></figure><p id="21ab7acb-7c74-492c-9232-b0266f47688a" class="">
+</p></div></div><div id="f202d49e-9355-4231-b22d-ac0480d5f2c6" class="column-list"><div id="e915a095-203f-47e4-8558-cf9b14c54eaf" style="width:25%" class="column"><figure id="e9cd8351-ac6c-4c2d-8341-7bde70aa8d77" class="image"><a href="Trekking%20product%20design%200a7f75b7cf8842799515868a3b2debf9/padding.png"><img style="width:192px" src="Trekking%20product%20design%200a7f75b7cf8842799515868a3b2debf9/padding.png"/></a></figure></div><div id="75b78a53-9b6c-4609-aadf-70fbdd42e133" style="width:75%" class="column"><p id="f678ee2d-f041-4250-b60a-fc67b0aeb450" class=""><em>this might have looked like SEO optimisation, which it is, but it’s also improving their experience, because if they went with any of the other websites, they’d be lost, because any of the others sites have minuscule content compared to what indiahikes has.</em></p><p id="a3772bb9-3a53-469c-9bb3-9449a690a195" class="">
+</p><p id="50d59615-3004-4d9e-acb3-28b8f15db742" class=""><strong>Second</strong></p><p id="0b6a56b6-2042-4a91-8d2b-7b71c7d6c430" class="">If someone clicks on one of the links, be quick in telling them that “hey, we are real people, we have an office, etc.” (<em>because the problem that we are trying to solve at this point is that the user doesn’t even know whether these are real companies that help us in trekking, or just some travel agency ad.</em>)</p><p id="3d85568a-3ce8-488d-9198-2da7a5a532ee" class="">How can we prove that we are a real company?</p><p id="04e1984e-c3ec-4d4d-857e-069dbad9b222" class="">by showing faces of the people working there at the front page. (<em>previous page was showing a photo of a mountain from the himalayas</em>)</p></div></div><figure id="76975aa8-e863-4a56-b029-ed65bf50d4f3" class="image"><a href="https://cdn-images-1.medium.com/max/1600/0*5rjFnAiJWo-GS4LF"><img style="width:768px" src="https://cdn-images-1.medium.com/max/1600/0*5rjFnAiJWo-GS4LF"/></a></figure><div id="71dd5ee0-c099-4de5-8502-18fe280b8dbf" class="column-list"><div id="697d4bc4-5ad6-464b-9404-afa8e3dc376f" style="width:25%" class="column"><figure id="bcfe0756-9709-4ecf-abe1-56c3e815b666" class="image"><a href="Trekking%20product%20design%200a7f75b7cf8842799515868a3b2debf9/padding.png"><img style="width:192px" src="Trekking%20product%20design%200a7f75b7cf8842799515868a3b2debf9/padding.png"/></a></figure></div><div id="90044468-71c5-4343-89fc-2be081befc7e" style="width:75%" class="column"><ul id="cacc062f-c34f-4157-b5bb-3c0404b6ad99" class="bulleted-list"><li style="list-style-type:disc"><em><strong>wireframe for website design</strong></em></li></ul><ul id="0209f9f2-ae5b-48a0-af3f-d676115c4a06" class="bulleted-list"><li style="list-style-type:disc"></li></ul><ul id="a004db10-02ee-493a-b90d-4b5a1b141997" class="bulleted-list"><li style="list-style-type:disc"><em>these are the photos of people who really work there, and their real office, the idea is that anyone can find pictures of mountains, but only real companies can do this. other unusual thing i’ve kept here is keeping the price on display, with large ranges, again the reasoning being to pull them in at this point.</em>  coming back to the problem that Pragya mentioned, “that she wishes there were a place to filter through different treks”, will automatically get solved, as she’ll end up on the right website.</li></ul><ul id="eac035c9-9377-4a90-a1a6-b8746e470fba" class="bulleted-list"><li style="list-style-type:disc">Page for people who know about indiahikes, searched the correct term we’ll present ourselves as a brand that <strong>provides a complete experience, so that you can achieve that transcendence, that people achieve with trekking</strong></li></ul></div></div><figure id="e955f9c1-ce95-4db8-95f8-f9540ac2eab9" class="image"><a href="https://cdn-images-1.medium.com/max/1600/0*DBkFz3lfuyXV8cw_"><img style="width:720px" src="https://cdn-images-1.medium.com/max/1600/0*DBkFz3lfuyXV8cw_"/></a></figure><div id="24e516e3-f100-4d94-ac20-f51a6cc1dbe9" class="column-list"><div id="850765c0-3ead-42a2-9013-8efb45d7e7f5" style="width:18.75%" class="column"><figure id="f9be8668-2e77-4ec9-b675-73e2f8751a1b" class="image"><a href="Trekking%20product%20design%200a7f75b7cf8842799515868a3b2debf9/padding.png"><img style="width:192px" src="Trekking%20product%20design%200a7f75b7cf8842799515868a3b2debf9/padding.png"/></a></figure></div><div id="87d7926c-63e9-4aaa-a735-87de1c68fef0" style="width:81.25%" class="column"><ul id="9b8760b5-f42a-4798-b2d4-71a679951647" class="bulleted-list"><li style="list-style-type:disc">With this design we are emphasising that we have an app that allows you do the fewest number of things, for the best trekking experience. This website design helps them Many of the people just want to not bother about fear of missing something out of their preparation, and training. here with this website</li></ul><ul id="3935ef12-1ffe-4ac3-aabb-364bda196779" class="bulleted-list"><li style="list-style-type:disc">Ok, so to summarise this hightlight,</li></ul><ul id="5040e7ea-ef2c-4191-950d-3b637384d37c" class="bulleted-list"><li style="list-style-type:disc"></li></ul><ul id="2c9078a4-caa5-4d4e-9fee-f82ab13ee394" class="bulleted-list"><li style="list-style-type:disc">1. we saw that, the reason people don’t are not able to distinguish good websites from bad ones is because they don’t know if how trekking companies work, are they travel agency ads or what? <strong>We solved this problem by customising the search results based on where they are in their journey.</strong></li></ul><ul id="86986a69-ddcf-479a-834b-e2519d65b300" class="bulleted-list"><li style="list-style-type:disc"></li></ul><ul id="4d893b42-7446-43d2-9855-7f4308782b3e" class="bulleted-list"><li style="list-style-type:disc">2. we also saw that for people who already know indiahikes, it might make sense to expose them to the concept of <strong>A preparation app, that just talks about the must haves for a trek</strong> (<em>it’s also a fitness app, with the same philosophy of must haves</em>)</li></ul><ul id="e9545f4a-954a-4a76-bf5d-430e1071a85c" class="bulleted-list"><li style="list-style-type:disc"></li></ul><p id="b89db9e2-6d86-4f63-a636-fed3b565afca" class=""><strong>OPINIONATED DIRECTION:</strong>  Now this last thing is a stylistic/opinionated decision, I took this decision because I think folks at indiahikes are doing things the correct way, and I don’t think it makes sense to change any of that, they also have great content on the website, the only thing we can do is curate it.  <strong>This is the first introduction of style (by style i mean opinions).</strong> In the upcoming sections, we’ll see how these stylistic decisions will become the guidelines, for the app that we are gonna design.  what decisions? decisions around, hey, are we making this a marketplace or just a play to improve their experience. would it make sense to make this a company that estabilishes a gig economy for people who can help early trekkers? I took these decisions, mostly based on my understanding of the trekking industry.</p><p id="5bb9e144-45a5-47b1-aa7e-6f2865aa4ede" class="">
+</p><p id="9f7c2048-98ca-43b7-b397-61e5e4e14c8d" class=""><strong>here are the those decisions:</strong></p><ul id="7119d9b2-28fe-48d3-ae02-472445c25a1e" class="bulleted-list"><li style="list-style-type:disc">1. An app that accompanies already existing trekking companies like Indiahikes.</li></ul><ul id="a51e8ff1-63ba-4abd-93f3-360e31e8edce" class="bulleted-list"><li style="list-style-type:disc">1.1. I’ll assume that they are doing this not just to get more customers, but also to increase their softpower,</li></ul><ul id="9f82b69a-9b06-462f-81dc-8a269c6cb7f4" class="bulleted-list"><li style="list-style-type:disc">2. one of the goal is to increase softpower for indiahikes, as they might want to use their own app, instead of Nike’s.</li></ul><ul id="6faaeed7-48f6-4d55-a035-c4a225c7c3aa" class="bulleted-list"><li style="list-style-type:disc">3. To provide more customised experience.</li></ul><ul id="91601d88-80c5-4b42-9582-08d27e08a85b" class="bulleted-list"><li style="list-style-type:disc">2. for someone who wants to just get stuff done, but also wants to achieve that transcendental state that trekking provides.</li></ul><ul id="24c1c385-1e33-480a-8cb2-1af28f3534ef" class="bulleted-list"><li style="list-style-type:disc">4. To reduce EC calls for obvious questions.</li></ul></div></div><p id="9b30f832-82cc-4db0-b59f-6e22969b34eb" class="">
+</p><p id="82c676d9-37ce-4d9b-8ee7-d35e7949d16d" class="">
+</p><div id="c1883279-9968-4e7d-b251-22cc99ad0294" class="column-list"><div id="95c4de46-3a0d-4ce1-87af-c8a290ffb611" style="width:25%" class="column"><figure id="65b01b2c-44fe-4f4d-b3b1-6c95d1cb1bca" class="image"><a href="Trekking%20product%20design%200a7f75b7cf8842799515868a3b2debf9/padding.png"><img style="width:192px" src="Trekking%20product%20design%200a7f75b7cf8842799515868a3b2debf9/padding.png"/></a></figure></div><div id="c178b317-f446-4099-bb46-fd3da68ccb11" style="width:75%" class="column"><h3 id="a5ad5940-33d0-4bbe-87db-f0b3e1456f26" class="">3. **WIREFRAMES AND FINAL SCREENS**</h3><ul id="fb9fdba8-6ca5-462c-98c7-a10f3eac9e67" class="bulleted-list"><li style="list-style-type:disc">Let’s go through the first</li></ul><figure id="51f66f48-0378-47e8-b446-9f9c91b6ad9b" class="image"><a href="https://cdn-images-1.medium.com/max/1600/0*ICuBtXx1er5R8zAL"><img style="width:144px" src="https://cdn-images-1.medium.com/max/1600/0*ICuBtXx1er5R8zAL"/></a></figure><p id="0a1c5c40-ddf4-4d0a-8a52-9ba9b1a344bb" class="">app can be seen as divided into two main parts, checklist and workout</p><p id="24793f94-4b4e-47c1-bafb-443d89a716be" class="">sketch showcasing that the workout and the checklist thing</p><p id="67322f5e-732a-493e-96b3-d2d00006ce49" class="">The app can be seen as divided into two main parts:</p><ul id="45a3ad46-1bd3-4a56-b5ac-aa2e89afc7a7" class="bulleted-list"><li style="list-style-type:disc">1. Checklist part &amp;</li></ul><ul id="e3f9ec1a-1481-470d-82f0-60c4ccf90107" class="bulleted-list"><li style="list-style-type:disc">2. the Workout part.</li></ul><p id="389ded96-31a4-44e9-b601-17226e36a3e4" class="">Let’s go through the checklist part first.</p><h3 id="5549b6fb-a2ec-4fcd-8f59-feb4c4f042b9" class="">3.1. Checklist part of the app.</h3><p id="6c9ef1c8-039c-4b06-b6e6-da5db4202024" class="">How does an app take shape? well, you look at it’s **what should be it’s purpose** and the **broader ideas we want to execute with this**.</p><p id="193007a8-891c-4daa-97fd-3fa76d7ca20d" class="">what are those -ideas:</p><p id="79ec9a70-e43a-4fd9-ac9c-897ec6424d26" class="">1. — the purpose is to get people away from feeling the FOMO, by assuring that all the necessary things are there in the app.</p><p id="7f74464d-713d-44fa-8334-f20f32d17712" class="">2. — They should be able to check off the things without having to learn new about how the app is structured etc (in other words, simple). This is important because it’s not their email app where they will go and **pin this task**, or put something in the starred folder. Infact the whole idea as this list is all the important things only, so we can’t have something else.</p><p id="8966682f-0f9c-4eb1-a334-f064e052c733" class="">3. — We won’t allow them to add any new tasks to the list by their own. why? because then they’ll have to think about the severity of the tasks,</p><p id="4c9c3a47-1ced-4c48-ac0d-cb186f257f84" class="">so that it’s clear in their head that “hey, this is all the things i need to check off for trekking, it’s the one place i go for quickly looking at what’s remaining from trekking.”</p><p id="66872513-3fed-49d8-8946-723175b88386" class="">4. — casual, language based UI.</p><p id="161aff19-ed2c-4da9-9188-043756dbeeb2" class="">ok, so now we’ll see how these ideas are permeated into all through checklist UI in the following notes (understanding the checklist UI):</p></div></div><figure id="3a03833a-9267-4f04-8901-34a8d32b476f" class="image"><a href="https://cdn-images-1.medium.com/max/1600/0*Z0nPyLhHajL3a5nU"><img style="width:336px" src="https://cdn-images-1.medium.com/max/1600/0*Z0nPyLhHajL3a5nU"/></a></figure><div id="3329366d-19a7-42a3-a8da-003df4eff356" class="column-list"><div id="75734994-3960-4eb9-ae05-fde325123304" style="width:18.75%" class="column"><figure id="cfd99729-aac1-4ff5-83ef-d2c2ca9d02fb" class="image"><a href="Trekking%20product%20design%200a7f75b7cf8842799515868a3b2debf9/padding.png"><img style="width:192px" src="Trekking%20product%20design%200a7f75b7cf8842799515868a3b2debf9/padding.png"/></a></figure></div><div id="9756f504-b951-40bd-b8c5-84bb5976614f" style="width:81.25%" class="column"><p id="044ca9c2-c651-4f0e-83be-8a410f4a68fc" class=""><em>Caption: Image showing all the checkmarks kept to the top right of all the “Task cards”. The reasoning behind this decision, is explained in the paragraph below.</em></p><p id="5b3100de-2f5b-4bf7-8701-1a88fd2d0f0d" class="">here we’ve kept the checkmark consistent across all the tasks of the checklist. because if someone just wants to check things off, they should be able to do it. Even if for something where a checkmark doesn’t make sense, we’ve kept it as it, as it will save them from wordering “how to get rid of the card in front of them”</p></div></div><figure id="541d24f1-50d4-42d9-8760-7bca57765f44" class="image"><a href="https://cdn-images-1.medium.com/max/1600/0*7GjljoQlEqCSsWeW"><img style="width:720px" src="https://cdn-images-1.medium.com/max/1600/0*7GjljoQlEqCSsWeW"/></a></figure><ul id="7d1cb05f-bbe8-4e09-8d9b-9d70f23dac01" class="bulleted-list"><li style="list-style-type:disc"><em>caption: The whole checklist part of the app. Below we’ll be talking about this structure.*</em></li></ul><p id="ecc586ba-09c2-442b-8445-c767f74bc8d1" class="">
+</p><div id="54ee335b-29fa-4d3f-8955-45e0ef1a9d20" class="column-list"><div id="905675df-2a64-4aef-ab28-fab07ecb8c2e" style="width:25%" class="column"><figure id="e453aa23-a5a1-4044-9884-93b28a6fccaa" class="image"><a href="Trekking%20product%20design%200a7f75b7cf8842799515868a3b2debf9/padding.png"><img style="width:192px" src="Trekking%20product%20design%200a7f75b7cf8842799515868a3b2debf9/padding.png"/></a></figure></div><div id="9fe804e9-5fe8-410e-8113-e0adcaf810ee" style="width:75%" class="column"><p id="e5039c20-6a10-4328-8c67-a3ad73ea4fe4" class="">— <strong>The whole checklist can be scrolled anytime</strong>, you might have noticed this from looking at the whole checklist. it’s upto them if they want to look at the whole list now, or check off things one by one etc. again this is motivated by the idea of keeping the UI simple. To keep it in a way that users don’t need another framework to understand it. and they very well understand the framework of scrolling.</p><figure id="ad6c2abd-4e94-41d5-a569-ab36500f53b0" class="image"><a href="https://cdn-images-1.medium.com/max/1600/0*0zqtg46Mygr7rrkS"><img style="width:624px" src="https://cdn-images-1.medium.com/max/1600/0*0zqtg46Mygr7rrkS"/></a></figure><p id="242d55ae-ccc1-4c37-9b8b-d47d1eb12331" class="">— <strong>Teaching them how to check a task off. here they see that the checked off tasks sit up-top, so they understand how to get back to them too.</strong></p><p id="1a14669c-ab64-4234-a3dc-b3470a1cc422" class=""><strong>CHIPS</strong></p><p id="5406e96b-3f29-4896-a571-bc45831bb71f" class=""><strong>an overview of the chips</strong></p><p id="4f92e1da-cd75-4ec3-b1d9-589f92b6ada5" class="">when someone has an nut-allergy, some other allergy, say, they can choose to just click on the chip and we’ll get it. nothing else changes, they can choose to mark the card done or not do anything.</p><p id="f760d0c2-0082-427f-ac39-2e4dc9741f0e" class=""><em>now the reason chips were chosen for these tasks </em>was because if it was a button, then it will appear like the main task, that they have to answer. And since most people will not have a nut-allergy say, it wouldn’t be appropriate asking them for this. whereas, if chips might only be noticed by someone actively searching for “nut allergy”. I think people will understand this, because they’ve already learn this interaction, when using gmail, and other products, where the product suggest an automated replies to a mail in the form of a chip.</p></div></div><figure id="fe9e45fc-268c-4d76-a631-3c1fad8f66bb" class="image"><a href="https://cdn-images-1.medium.com/max/1600/0*DTC2uPZBO_Xly8vq"><img style="width:528px" src="https://cdn-images-1.medium.com/max/1600/0*DTC2uPZBO_Xly8vq"/></a></figure><h3 id="b7b2a0a9-dc39-43b1-bf04-1df4cb542d6c" class="">Checking off THE CLOTHES and Equipment:</h3><figure id="acbf367d-7060-4646-ae89-7d42b37527c7" class="image"><a href="https://cdn-images-1.medium.com/max/1600/0*LJk_LvuUCj4CquSE"><img style="width:864px" src="https://cdn-images-1.medium.com/max/1600/0*LJk_LvuUCj4CquSE"/></a></figure><div id="1bb6262f-f538-4dde-beb3-ac53e382e7d3" class="column-list"><div id="0e683c55-c76c-4542-b5a3-c5089b8f6a7d" style="width:18.75%" class="column"><figure id="cc7b5c81-a870-4669-a9f7-d6253960a14a" class="image"><a href="Trekking%20product%20design%200a7f75b7cf8842799515868a3b2debf9/padding.png"><img style="width:192px" src="Trekking%20product%20design%200a7f75b7cf8842799515868a3b2debf9/padding.png"/></a></figure></div><div id="aaea0769-6dec-40ef-a6c4-8c881fe649d3" style="width:81.25%" class="column"><p id="5389299e-e109-4cff-aeda-b3178ecaa870" class=""><em>The idea is to give them an option to print out the bus schedule, so that they don’t have to rely on their phones only.</em></p><h3 id="e51505fd-7d6a-433d-901e-32e1c088fd99" class="">SOME MORE MISCELLANEOUS STUFF ABOUT THE LIST</h3><p id="f2a5ea4c-9130-49c6-bcd8-04f2b3f1ba85" class="">1. since people can very easily check off the tasks, what is someone checks off a card without doing the task written on it? what if they check off the card that tells them to workout, without setting up a workout first?</p><p id="c2bed329-1269-4c16-a9de-9ef8dfae378b" class="">Ans: Ok, so yes, these problem can happen, but for the most part we’ll still go with allowing them to check off anything. But with the exception of some cards like “the workout card”, in these exceptional cases(which are set by the editor, only card based logic, so they won’t have to do it again and again), they’ll be able to dismiss the card, but a note will appear at the top. which asks them if they’ve done what they wanted to do?.</p><figure id="4f4edace-9a0e-4151-872f-05ea04b80279" class="image"><a href="https://cdn-images-1.medium.com/max/1600/0*tggpDLhcyKeH8ERF"><img style="width:768px" src="https://cdn-images-1.medium.com/max/1600/0*tggpDLhcyKeH8ERF"/></a></figure><p id="d5253d56-193d-450c-a510-f9ca45c933c1" class=""><em>Caption: yellow card appears very rarely.</em></p><p id="46ed88ac-e07e-4cdb-866f-110aff1f2b14" class=""><strong>2. — A couple of notes about how I think this is how it should be:</strong>1. first I wrote down the principle guiding what the list should be and what it should not be, and then I made the different possible components and cards, looking at the content provided by <em>Indiahikes</em> to cover all the situations.</p><figure id="95431f61-9ddf-425a-9881-032efe7320a0" class="image"><a href="https://cdn-images-1.medium.com/max/1600/0*GhF1yRrO1Aeeryqt"><img style="width:480px" src="https://cdn-images-1.medium.com/max/1600/0*GhF1yRrO1Aeeryqt"/></a></figure><p id="719b4f7d-4ad8-4396-bbab-223b8169626d" class="">2. secondly as you see in the third screen, if it’s been more than 2 since the pending workout. it gets deleted and we see the grey note. In that case, the remaining workouts become a little more difficult. (*<em>if there’s a scope ofcourse</em>*)</p><p id="e2d3f081-1acf-406c-be45-b04d1c91e86c" class="">
+</p><h3 id="3c9e2907-7dbf-4d03-b6b0-d9d27c936915" class="">3.2 workout part of the app</h3><p id="8f0c194c-3179-4ae3-a722-39eae00abefe" class=""><strong>what if the person is coming only 2 days prior to the day of trekking, will they be able to utilise this workout app?</strong> No. They won’t be able to fully take advantage of this app. they’ll still be able to use it and do some workouts, but it’s designed for people who are setting-up the workouts about 15–30 days prior to the trek.</p><p id="b576ebef-b2db-480c-b5e7-24fbb130904d" class="">Ok, let’s dive in:</p><p id="433a97bc-a13c-43f5-a7ee-f1f3281e4f8d" class="">The first thing that you do with the workout part is, that you take a **fitness test**.</p><p id="413c5a50-221e-4e97-91f9-741994cb6ede" class="">Where do you find this test?</p><p id="5986ee6f-1fc4-4097-b69e-7023f4a4d101" class="">Two ways:</p><p id="af20bdbb-65fe-4e36-bca5-89d24b709cac" class="">1. By clicking the workout card from the checklist.</p><p id="dfc3993a-afdf-4828-9e69-a4904ab3a039" class="">2. or by simply going to the workout tab. and starting it.</p></div></div><figure id="82269a01-9728-40a7-99b6-976700201b07" class="image"><a href="https://cdn-images-1.medium.com/max/1600/0*GepRTaqd1rBF4mun"><img style="width:672px" src="https://cdn-images-1.medium.com/max/1600/0*GepRTaqd1rBF4mun"/></a></figure><p id="54d069de-65c7-492a-acd4-c447175d0d2e" class=""><em>Caption: Two ways of setting up a workout</em></p><div id="002512ee-0268-452d-8118-fd0a808894bf" class="column-list"><div id="14dbf4dd-a0c8-435b-adf3-66be7c51ffdc" style="width:18.75%" class="column"><figure id="35178fa5-38e1-4097-ae0c-c1813be64cfa" class="image"><a href="Trekking%20product%20design%200a7f75b7cf8842799515868a3b2debf9/padding.png"><img style="width:192px" src="Trekking%20product%20design%200a7f75b7cf8842799515868a3b2debf9/padding.png"/></a></figure></div><div id="da7160e5-931a-42ab-b09a-3d524b7a255d" style="width:81.25%" class="column"><p id="e510f6e4-d047-4980-aa4a-e10640e0a149" class=""><strong>What is this fitness test look like?</strong></p></div></div><figure id="7fed1d2a-86f0-49b4-88fe-f78f86e98bf1" class="image"><a href="https://cdn-images-1.medium.com/max/1600/0*UCic4ffvc-K8LP7N"><img style="width:864px" src="https://cdn-images-1.medium.com/max/1600/0*UCic4ffvc-K8LP7N"/></a></figure><p id="a4ea4b9d-fedf-4010-aed8-8baa5a937f36" class=""><em>caption: in screen no. 3, they see a workout test from the options, based on the the “exercises” they choose. similar workouts on different levels are right next to each other, and the hard the exercise, more intense the color. there are only 3 level of difficulties.</em></p><figure id="ee733862-496c-48b9-ba63-581147a56c9c" class="image"><a href="https://cdn-images-1.medium.com/max/1600/0*jMwL-x5Eak4J0yY-"><img style="width:768px" src="https://cdn-images-1.medium.com/max/1600/0*jMwL-x5Eak4J0yY-"/></a></figure><p id="d9f54aeb-3c59-4851-9ce0-511df5e32bc8" class=""><em>here’s how the workout goes.</em></p><div id="1838f866-e2d5-4458-8908-86aec90532b3" class="column-list"><div id="52d335f1-bed8-47b1-9bb2-e94fa5496780" style="width:12.5%" class="column"><figure id="01923d1b-d7c3-4389-9967-4d41e38e5caf" class="image"><a href="Trekking%20product%20design%200a7f75b7cf8842799515868a3b2debf9/padding.png"><img style="width:60px" src="Trekking%20product%20design%200a7f75b7cf8842799515868a3b2debf9/padding.png"/></a></figure><p id="28f45a6b-6b05-49ed-a87a-5672f46200c7" class="">
+</p></div><div id="42dc93af-82c0-42f9-92a7-7e19059f5fa4" style="width:87.5%" class="column"><p id="e74dbc99-b3d9-4120-9566-144fb38ef66b" class=""><strong>Just after their test is done, we have to make them schedule the workouts.</strong></p><p id="e7dea129-d1cf-476a-92e3-88c92cbe227a" class="">Once they are done with the workout. They see their stats like this. which they can edit.</p></div></div><figure id="0713c41f-fa80-47a3-aa09-f33b6cc294f3" class="image"><a href="https://cdn-images-1.medium.com/max/1600/0*THvos--VuBU5bNvw"><img style="width:768px" src="https://cdn-images-1.medium.com/max/1600/0*THvos--VuBU5bNvw"/></a></figure><div id="c3553354-c20e-4410-a6f4-98c3febd6bbb" class="column-list"><div id="60da96ce-a22b-4214-b5cf-335e1695f36d" style="width:12.5%" class="column"><figure id="fb54d22b-a310-4976-8b40-8dfa639ca351" class="image"><a href="Trekking%20product%20design%200a7f75b7cf8842799515868a3b2debf9/padding.png"><img style="width:192px" src="Trekking%20product%20design%200a7f75b7cf8842799515868a3b2debf9/padding.png"/></a></figure></div><div id="cced4c0c-489b-409e-bd81-4714e447c6cc" style="width:87.5%" class="column"><p id="4082a438-71e9-42aa-851e-a14924ff8235" class=""><em>let’s look at what’s happnein in this image.</em></p><p id="f3eede3d-2e02-496a-adcb-fd044b794dfa" class=""><em><strong>1st screen</strong></em><em>: they are confirming the information about the workout they just did.</em></p><p id="904eff20-3ede-43cf-a729-f19310b50e29" class=""><em><strong>2nd screen</strong></em><em>: They see the result, but that’s not where we want their focus to be. we just want to show them the schedule, so that’s the main thing on the screen.</em></p><p id="705dab46-ddc3-409b-84cd-c205687f4d85" class=""><em><strong>3rd screen</strong></em><em>: they get a autofilled schedule, which is upto them to change.</em></p><p id="6a0a8eed-3227-4938-9d54-735de0c08b7b" class="">This is how the <strong>test</strong> and the <strong>scheduling</strong> happen.</p><p id="1b837f54-bc8f-4c2d-8b78-fd7dd9514c98" class="">What we just saw above was a one time thing.</p><p id="2109d8e1-2c48-4c61-be34-b46d796a1c70" class=""><strong>Let’s see how the workout page looks like on their day to day</strong></p><p id="57c0c1a4-7319-45e3-8312-451fc4fcf682" class="">now that the setup is done.</p></div></div><figure id="867f46de-a007-4ad2-a20e-b2e092a1dd11" class="image"><a href="https://cdn-images-1.medium.com/max/1600/0*OE-Tjef5YjfSkNLL"><img style="width:720px" src="https://cdn-images-1.medium.com/max/1600/0*OE-Tjef5YjfSkNLL"/></a></figure><div id="9af90693-087e-40ad-9f4f-350e873a3375" class="column-list"><div id="c580726e-ec18-42d5-9c52-67b02e66cb26" style="width:12.5%" class="column"><figure id="689f8c61-96aa-4c2b-9559-1ac91be173f8" class="image"><a href="Trekking%20product%20design%200a7f75b7cf8842799515868a3b2debf9/padding.png"><img style="width:192px" src="Trekking%20product%20design%200a7f75b7cf8842799515868a3b2debf9/padding.png"/></a></figure></div><div id="14ad6996-b44c-4b35-9561-6d4854b9a42e" style="width:87.5%" class="column"><p id="89ef6c5c-afa8-4b00-b24d-2615195fda8f" class=""><strong>ok, let’s acknowledge what’s being shown here. </strong>1. if someone misses a workout they see this red note at the top of their, screen, which allows you to do the missed workout now.</p><p id="eaceeb0e-ce4f-4c60-bbec-1aa319c2afc6" class="">2. secondly as you see in the third screen, if it’s been more than 2 since the pending workout. it gets deleted and we see the grey note. In that case, the remaining workouts become a little more difficult. (<em>if there’s a scope ofcourse</em>)</p><p id="81e6f0bc-fe7d-4d2b-9ba1-21a113549308" class="">ok, so till now we know how scheduling the workout works.</p><p id="787dac30-233d-4ff3-b932-f41851a1dc21" class=""><strong>But what happens when you click on one of these workouts and start one?</strong></p></div></div><figure id="7f3affee-8361-488b-9635-829a49a15427" class="image"><a href="https://cdn-images-1.medium.com/max/1600/0*cw9OC8qBT0f1C_Wa"><img style="width:720px" src="https://cdn-images-1.medium.com/max/1600/0*cw9OC8qBT0f1C_Wa"/></a></figure><p id="53923834-c6d8-4fb3-92e6-22fbf0840cd2" class=""><em>the flow diverges into 3 different ideas.</em></p><div id="0f6ff2c7-5ebe-4f1c-a2bc-2bf8942994ed" class="column-list"><div id="7a83b415-c4e2-41fa-9a8f-dc7edc8dc64d" style="width:12.5%" class="column"><figure id="5b464aba-4668-4361-a186-96650c765657" class="image"><a href="Trekking%20product%20design%200a7f75b7cf8842799515868a3b2debf9/padding.png"><img style="width:192px" src="Trekking%20product%20design%200a7f75b7cf8842799515868a3b2debf9/padding.png"/></a></figure></div><div id="8c1e6dc1-43b2-475d-aead-e16934ef829c" style="width:87.5%" class="column"><p id="0f687471-629a-4723-9d3e-eddad122d014" class="">Wait, something wrong.</p><p id="111eee82-e3f6-42eb-9804-783f7939a2cc" class="">Why are we splitting the workout into 3 different flow?</p><p id="b3259f9f-abe6-48cb-ac6a-e7f46010f57a" class="">— In short, it’s because some workouts are timebound and some are not. so because of that, some workouts can autoplay and some can not, for example you can do a set of jumping jacks, followed by a set of lunges, with your phone autoplaying one after another. But you can’t do “bicep curls” followed by “lat pulls”, in sync with your trainer (phone here). there’s one more case, that we’ll see in the pictures below.</p><p id="1f12136c-5c3c-44d3-bb20-8b57bc219f7a" class="">
+</p><p id="77784246-9987-40b6-bf4b-af808205c182" class="">
+</p><p id="70d11885-92a7-43ed-8a95-13b5e20b2c66" class=""><strong>Home workout</strong></p></div></div><figure id="419ce78f-a9f8-4d5f-b435-3be81f5d59f5" class="image"><a href="https://cdn-images-1.medium.com/max/1600/0*lyZTjmsIULVtS1oU"><img style="width:720px" src="https://cdn-images-1.medium.com/max/1600/0*lyZTjmsIULVtS1oU"/></a></figure><p id="2da0490c-362d-45e1-9fc9-6ff5a50ac428" class=""><em>Some important screens from the </em><em><strong>home workout </strong></em><em>flow.</em></p><div id="697a495c-5c87-443c-9710-6895e745fb26" class="column-list"><div id="93b34840-11f7-4ecf-9dc1-660143d4d519" style="width:12.5%" class="column"><figure id="2172e4f2-b0e1-4a36-a586-3989119d2ae4" class="image"><a href="Trekking%20product%20design%200a7f75b7cf8842799515868a3b2debf9/padding.png"><img style="width:36px" src="Trekking%20product%20design%200a7f75b7cf8842799515868a3b2debf9/padding.png"/></a></figure></div><div id="aa17df92-61f6-4094-8a79-d4f5c6a53047" style="width:87.5%" class="column"><p id="561ff05e-841b-4233-bf52-f083200bb461" class="">We autoplay one exercise after another, and they can skip the current one if they like.</p></div></div><figure id="60d4ff06-be68-4118-8c4a-49d635aacc64" class="image"><a href="https://cdn-images-1.medium.com/max/1600/0*AEU8do_a5CKA5j8Z"><img style="width:672px" src="https://cdn-images-1.medium.com/max/1600/0*AEU8do_a5CKA5j8Z"/></a></figure><p id="2820cf1a-4577-402b-a7b8-ac12d6ec97ed" class=""><em>They’d have to do this if there’s no autoplay.</em></p><div id="34ff613b-7f4a-45d8-8973-c899c4bf9936" class="column-list"><div id="231b8b84-b880-44df-94d8-03b36a982f73" style="width:18.75%" class="column"><figure id="c649c16d-f0bc-4251-bff0-c859ac8f41da" class="image"><a href="Trekking%20product%20design%200a7f75b7cf8842799515868a3b2debf9/padding.png"><img style="width:36px" src="Trekking%20product%20design%200a7f75b7cf8842799515868a3b2debf9/padding.png"/></a></figure></div><div id="1c7f6967-9d3b-4dfa-948b-67f1ab078004" style="width:81.25%" class="column"><p id="f47d713c-4a8d-40a0-80cb-adb239be57eb" class="">
+</p><p id="9894b88d-245b-4b60-a900-af901d260828" class="">
+</p><p id="fd120226-52b8-4f5d-991a-9c00c501758a" class=""><strong>Running Workout</strong></p></div></div><figure id="ad8cf313-9642-4582-bec5-3a01d22fbba4" class="image"><a href="https://cdn-images-1.medium.com/max/1600/0*ZwlSajcFg1SkowHd"><img style="width:912px" src="https://cdn-images-1.medium.com/max/1600/0*ZwlSajcFg1SkowHd"/></a></figure><p id="43c9f3ae-2240-4b46-9057-7546b77484e2" class=""><em>screens during: running, stretching(and cooldown), your numbers that.</em></p><div id="57b96f6a-dedf-4021-b430-b207f4ae439c" class="column-list"><div id="e9ab31df-b87d-4628-9550-32c3dfc92f7f" style="width:18.75%" class="column"><figure id="607462a6-ce0c-43be-a6d9-95c3543f7aea" class="image"><a href="Trekking%20product%20design%200a7f75b7cf8842799515868a3b2debf9/padding.png"><img style="width:144px" src="Trekking%20product%20design%200a7f75b7cf8842799515868a3b2debf9/padding.png"/></a></figure></div><div id="4f2d4260-898b-43d6-81a9-2747d6618261" style="width:81.25%" class="column"><p id="e19eec70-3b6e-48ea-bf0a-34b935445f67" class="">— again, it’s very similar to the home workout, except that here, we don’t keep a way to see a video tutorial, assume that they know how to run.</p><p id="45c784de-8199-4739-96ca-4e1a010c31ca" class="">— one thing to note here is they get a timer, which is optional to use. it’s communicated with the copy that it’s optional to use “Use this timer, if you like.”</p><p id="28054479-5bdc-42ef-a4c5-fe38963dea2a" class="">
+</p><p id="0da28513-9f9a-4baf-8c2b-6c3f6b8dda98" class="">
+</p><p id="a4a1436d-7b6e-4671-b0e3-d68e5ab6b254" class=""><strong>The gym workout</strong></p></div></div><figure id="e50d164e-a6a8-4dd8-805a-8bb200c36008" class="image"><a href="https://cdn-images-1.medium.com/max/1600/0*beIOtyezN3WDxZ3u"><img style="width:864px" src="https://cdn-images-1.medium.com/max/1600/0*beIOtyezN3WDxZ3u"/></a></figure><div id="f2cfba9b-1b3c-4e73-8405-6b3105d2d4d5" class="column-list"><div id="9cdff599-40f3-49b4-9604-7a244de7b252" style="width:18.75%" class="column"><figure id="e44bbdb8-c22a-4371-baa9-fe56a1376820" class="image"><a href="Trekking%20product%20design%200a7f75b7cf8842799515868a3b2debf9/padding.png"><img style="width:192px" src="Trekking%20product%20design%200a7f75b7cf8842799515868a3b2debf9/padding.png"/></a></figure></div><div id="a5e203ca-798b-4b02-b5c9-4848f0143a39" style="width:81.25%" class="column"><p id="fad68882-ee7f-42d1-a357-403b87b53a46" class="">here’s where we see some difference from the other two.</p><p id="feb397eb-8991-4fc7-b5f1-d58c02b4c3b7" class="">— they see an order beforehand, they can do the workout in whatever order they like, both before and during the workout.</p><p id="883bbab1-5fa4-4336-8e1b-bbea31e0d075" class="">— there’s no timer, except for the rest part. (for obvious reasons)</p><p id="55fda506-7fc4-4be4-98af-61f55df3e70d" class="">— no video support, (they can peek the info icon where they get a gif though.)</p><p id="1909b30e-2d36-4f20-abeb-9d1724d8d609" class="">— finally the streching part of the workout will be same as others.</p><p id="e0794dc1-c3de-46f3-9015-01dae0b1093a" class=""><strong>One more thing:</strong></p><p id="35e03283-e13d-45ac-8445-6141f123ecf7" class="">There’s one more thing at the start of all this workouts.</p><p id="db32324b-30ef-469d-80b9-063cc2476ded" class="">Where they can change their scheduled workout to some other one. like from running to gym.</p></div></div><figure id="3a561cd2-5273-4265-8ab0-654ed5623d29" class="image"><a href="https://cdn-images-1.medium.com/max/1600/0*Ryqyrr7xHfa0fBOc"><img style="width:816px" src="https://cdn-images-1.medium.com/max/1600/0*Ryqyrr7xHfa0fBOc"/></a></figure><div id="c89acd36-2d27-4c78-9092-dee94ceff0e9" class="column-list"><div id="c95e14d8-f240-43a5-9b13-f457d235eb2e" style="width:18.75%" class="column"><figure id="1b7a35ee-5609-488e-8e40-2c9df1a1ebb9" class="image"><a href="Trekking%20product%20design%200a7f75b7cf8842799515868a3b2debf9/padding.png"><img style="width:192px" src="Trekking%20product%20design%200a7f75b7cf8842799515868a3b2debf9/padding.png"/></a></figure></div><div id="afa2c4e4-9fed-4683-adc0-81570001b25a" style="width:81.25%" class="column"><p id="93f63f72-6f76-4fb4-9e11-6f1a97d602b6" class="">we provide this only 3–4 times (if they are doing good), because it might not be great if someone comes to the gym-building irl, and see that they have to now do the home workout. And of-ofcourse, they can always mark things done without actually doing them.</p><hr id="5a93cd38-c99d-4622-ba8c-ca56269f6e2a"/><p id="ba02f63e-394c-4a3b-b89a-4044f31477b6" class="">
+</p><p id="be5e74b7-d9ee-44eb-8bd1-39bd93d366a1" class="">
+</p><p id="4a760153-1895-47f7-b627-fad5e474f812" class="">you can find the whole thing in a Figjam file as well if you want to go in depth and read all the things that happened. <a href="https://www.figma.com/file/G2Cvl1Laor0XOm38rdXaDx/Trekking-product">https://www.figma.com/file/G2Cvl1Laor0XOm38rdXaDx/Trekking-product</a></p></div></div></div> <a href="design.html" style="font-family: Ideal Sans A,Ideal Sans B,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji; color: rgb(84, 56, 147);">← Home <br></a> </article></body></html>
