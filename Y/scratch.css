@@ -1,0 +1,491 @@
+@font-face {
+  font-family: Georama;
+  src: url('fonts/Georama[wdth,wght].ttf') format('truetype');
+}
+
+body {
+  margin: 0;
+}
+
+#navbar {
+  background-color: rgb(255, 255, 255);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: block;
+  transition: top 0.3s;
+}
+
+#navbar a {
+  width: 12.3vw;
+  float: left;
+  display: block;
+  color: #6136c4;
+  text-align: center;
+  padding-top: 2vw;
+  padding-bottom: 2vw;
+  text-decoration: none;
+  font-size: 1vw;
+  letter-spacing: 0.3vw;
+}
+
+#navbar a:hover {
+  background-color: rgb(248, 240, 255);
+  color: rgb(89, 44, 194);
+  font-style: italic;
+}
+
+p{
+  font-family: spectral, serif;
+}
+h2{
+  font-family: georama, sans-serif;
+  font-variation-settings: "wght" 700;
+}
+
+h3{
+  font-family: spectral, serif;
+}
+
+.column {
+    float: left;
+    width: auto;
+    font-family: 'georama';
+    height: 58vw;
+    margin-top:6vw;
+    margin-bottom:6vw;
+  }
+  .column-process {
+    float: left;
+    width: auto;
+    font-family: 'georama';
+    height: auto;
+    margin-top:6vw;
+    margin-bottom:6vw;
+  }
+
+  .columnf {
+    float: left;
+    width: auto;
+    font-family:system-ui;
+    height: 20vw;
+    margin-top:6vw;
+    margin-bottom:6vw;
+
+  }
+
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    font-family:system-ui;
+  }
+
+  .column_design_only {
+    float: left;
+    width: auto;
+    font-family: 'georama';
+    height: 20vw;
+    margin-top:6vw;
+  }
+  
+
+  .item-1{
+    grid-area: itema;
+  }
+
+  .item-2{
+    grid-area: itemb;
+  }
+
+  .item-3{
+    grid-area: itemc;
+  }
+
+  .item-4{
+    grid-area: itemd;
+  }
+
+  .item-5{
+    grid-area: itemaa;
+  }
+
+  .item-i1{
+    grid-area: iteme;
+  }
+
+  .item-i2{
+    grid-area: itemf;
+  }
+  .item-i3{
+    grid-area: itemg;
+  }
+
+  .item-i4{
+    grid-area: itemh;
+  }
+
+  .item-i5{
+    grid-area: itemi;
+  }
+
+  .item-9{
+    grid-area: itemz;
+  }
+
+  
+
+  .index-images1{
+    height: inherit;
+    width: 40.5vw;
+    object-fit: cover;
+  }
+
+.index-images{
+  height: inherit;
+  width: 19.5vw;
+  object-fit: cover;
+  filter: grayscale(100%);
+
+
+}
+.normal-images{
+  height: auto;
+  width: 19.5vw;
+  object-fit: cover;
+  filter:none
+}
+
+.normal-imagesS2{
+  height: auto;
+  width: 40.5vw;
+  object-fit: cover;
+  filter:none
+}
+
+.svg-images{
+  height: 7vw;
+}
+.containerp-is{
+  display:grid;
+      margin-right: 3vw;
+      margin-top: 0vw;
+  
+  grid-template-columns: 4vw 19.5vw 19.5vw ;
+  grid-template-rows: auto 1vw auto auto 11vw;
+  
+  column-gap: 1.5vw;
+  row-gap: 1.5vw;
+
+  float:right;
+
+  grid-template-areas: 
+  ". itema itema "
+  ". . . "
+  ". itemb itemb "
+  ". itemc itemc "
+  ". itemd itemg "
+  
+
+}
+
+.containerp-i1 {
+  display:grid;
+      margin-right: 3vw;
+  
+  grid-template-columns: 4vw 19.5vw 19.5vw ;
+  grid-template-rows: 18.5vw  18.2vw 18.5vw 18.5vw 1vw;
+  
+  column-gap: 1.5vw;
+  row-gap: 1.5vw;
+
+  float:right;
+
+  grid-template-areas: 
+
+  ". itemb iteme "
+  ". itemc itemf "
+  ". itemd itemg "
+  ". itema itema "
+  ". . . "
+  
+
+}
+
+.containerp-i {
+    display:grid;
+    margin-right: 3vw;
+    grid-template-columns: 4vw 19.5vw 19.5vw;
+    grid-template-rows: 5vw 1vw 11vw 11vw 11vw;
+    column-gap: 1.5vw;
+    row-gap: 1.5vw;
+    float:right;
+    grid-template-areas:
+      ". itema itema "
+      ". . . "
+      ". itemb iteme "
+      ". itemc itemf "
+      ". itemd itemg "
+      ". itemz itemy ";
+  }
+
+  .containerp-ir {
+    display:grid;
+    margin-left: 3vw; 
+    grid-template-columns:  19.5vw 19.5vw 4vw;
+    grid-template-rows: auto 1vw 11vw 11vw 11vw;
+    
+    column-gap: 1.5vw;
+    row-gap: 1.5vw;
+
+    float:right;
+
+    grid-template-areas: 
+    "itema itema ."
+    ". . . "
+    "itemb iteme ."
+    "itemc itemf ."
+    "itemd itemg ."
+
+  }
+
+  .containerp {
+    display:grid;
+        margin-right: 3vw;
+    
+    grid-template-columns: 4vw 19.5vw 19.5vw ;
+    grid-template-rows: auto;
+    
+    column-gap: 1.5vw;
+    row-gap: 0;
+
+    float:right;
+
+    grid-template-areas: 
+    ". iteme itemf "
+    ". itema itema "
+    ". itemg itemh "
+    ". itemb  itemb"
+    ". . . "
+
+  }
+
+  .container-process {
+      margin-right: 3vw; 
+      margin-left: 5vw; 
+
+
+      
+      column-gap: 1.5vw;
+      row-gap: 1.5;
+  
+  
+    }
+
+
+  .containerp-r {
+  display:grid;
+    margin-left: 3vw; 
+    grid-template-columns:  19.5vw 19.5vw 4vw;
+    grid-template-rows: 13vw auto 11vw 11vw;
+    
+    column-gap: 1.5vw;
+    row-gap: 1.5vw;
+
+    float:right;
+
+    grid-template-areas: 
+    "itema itemf ."
+ 
+    "itemb iteme ."
+    "itemg iteme ."
+    ". itemh ."
+
+
+  }
+
+  .containerp-rv {
+    display:grid;
+      margin-left: 3vw; 
+      grid-template-columns:  19.5vw 19.5vw 4vw;
+      grid-template-rows: 13vw auto auto auto;
+      
+      column-gap: 1.5vw;
+      row-gap: 1.5vw;
+  
+      float:right;
+  
+      grid-template-areas: 
+      "itema itemf ."
+   
+      "itemb iteme ."
+      "itemg itemh ."
+      ". . ."
+  
+  
+    }
+
+
+    .containerp-rt {
+      display:grid;
+        margin-left: 3vw; 
+        grid-template-columns:  19.5vw 19.5vw 4vw;
+        grid-template-rows: 13vw 17vw 13vw 13vw;
+        
+        column-gap: 1.5vw;
+        row-gap: 1.5vw;
+    
+        float:right;
+    
+        grid-template-areas: 
+        "itema iteme ."
+     
+        "itemb itemc ."
+        "itemd itemaa ."
+        ". . ."
+    
+    
+      }
+
+  .containerp-rh {
+    display:grid;
+      margin-left: 3vw; 
+      grid-template-columns:  19.5vw 19.5vw 4vw;
+      grid-template-rows: 13vw auto auto auto;
+      
+      column-gap: 1.5vw;
+      row-gap: 1.5vw;
+  
+      float:right;
+  
+      grid-template-areas: 
+      "itema itemf ."
+   
+      "itemb itemb ."
+      "itemg itemh ."
+      ". . ."
+  
+  
+    }
+
+    
+    .containerpq {
+      display:grid;
+          margin-right: 3vw;
+      
+      grid-template-columns: 4vw 19.5vw 19.5vw ;
+      grid-template-rows: auto;
+      
+      column-gap: 1.5vw;
+      row-gap: 1.5vw;
+  
+      float:right;
+  
+      grid-template-areas: 
+      ". iteme iteme "
+      ". itemf itemg "
+      ". itemh itemi "
+      ". . . "
+  
+    }
+
+
+  .left-grid{
+    margin-right: 3vw;
+  }
+
+
+
+
+a {
+  text-decoration: none;
+  color: #3D00B1;
+  font-family: 'open sans', roboto, pt sans, sans-serif;
+}
+
+a:hover{
+  font-style: italic;
+  background: rgb(255, 255, 151);
+
+  
+}
+
+
+.icon-icomoon:before {
+  content: "\62";
+}
+
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?tla5f1');
+  src:  url('fonts/icomoon.eot?tla5f1#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?tla5f1') format('truetype'),
+    url('fonts/icomoon.woff?tla5f1') format('woff'),
+    url('fonts/icomoon.svg?tla5f1#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-icomoon:before {
+  content: "\62";
+}
+.icon-edit:before {
+  content: "\61";
+}
+
+
+
+
+.navbarr {
+  overflow: hidden;
+  background-color: rgba(51, 51, 51, 0);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.navbarr a {
+  float: right;
+  display: block;
+  color: #4f6fff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: proxima-nova;
+}
+
+.navbarr a:hover {
+  background: #ddd;
+  color: black;
+}
+
+
+.common-style {
+  font-family:spectral, serif;
+  font-weight: 400;
+  font-size: 1.2vw;
+  line-height: 1.7vw;
+  margin-top: 0%;
+  margin-bottom: 0%;
+}
+
