@@ -519,14 +519,25 @@
   @media only screen and (min-width: 768px) {
   .example {background: blue;}
 
-  .moreItems{
+
+  .moreItemsMargin{
       margin-left: 30%;
       margin-right: 2rem;
   }
-  .moreItems:hover{
+  .moreItemsMargin:hover{
       margin-left: 25%;
       padding-left: 5%;
       margin-right: 2rem;
+  }
+
+  .moreItems{
+    border-top: solid black 1px;
+    border-bottom:  solid black 1px;
+  }
+  .moreItems:hover{
+
+      border-top: solid beige 1px;;
+      border-bottom: solid beige 1px;;
       background-color: beige;
   }
 
@@ -793,6 +804,20 @@
       </div>
     -->
   <!--here's where the real stuff starts-->
+
+  <div class="moreItemsmargin" style=" font-family: georama, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:20px; margin-bottom: 12px;">More from 2023</div>
+<a href="google.com" class="moreItemsMargin moreItems" style="text-decoration: none; padding-top: 20px;display: flex; flex-direction: row; row-gap: 10px;">
+
+    <div style="width: 40%;">
+        <p style="font-family: georama, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:24px; text-decoration:underline;">Getting developers onboard to adopt a design system</p>
+        <p style="margin-top: 40px;font-family: georama, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:32px; font-variation-settings: 'wdth' 80, 'wght' 200;">2023 — 2</p>
+    </div>
+    <div style="width: 60%;background-color: #543054;mix-blend-mode: multiply;" >
+       <img src="img/stickersheet.png" style="object-fit: cover; object-position: left top; max-height: 200px; width: 100%;; mix-blend-mode: multiply;" >
+    </div>
+
+</a>
+
   <div class="containert" style="font-family: georama; padding-bottom: 1vw; border-top: #ffffff00;">
     <div class="cell celot-1" style="height: 7vw;"></div>
     <div class="cell celot-2" style="height: 7vw;"></div>
@@ -965,15 +990,16 @@
 
 </div>
 
-<div class="moreItems" style="font-family: georama, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:20px;">More from 2023</div>
-<a class="moreItems" style="padding-top: 20px;border-top: solid black 1px; border-bottom:  solid black 1px;display: flex; flex-direction: row; row-gap: 10px;">
+<div class="moreItemsmargin" style=" font-family: georama, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:20px; margin-bottom: 16px; font-variation-settings: 'wght' 400;">More from 2023</div>
+<a href="google.com" class="moreItemsMargin moreItems" style="text-decoration: none;padding-top: 20px;border-top: solid black 1px; border-bottom:  solid black 1px;display: flex; flex-direction: row; row-gap: 10px;">
 
-    <div style="width: 50%;">
-        <p style="font-family: georama, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:20px; text-decoration:underline;">Getting developers onboard to adopt a design system</p>
-        <p style="margin-top: 40px;font-family: georama, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:30px; font-variation-settings: 'wdth' 80 ,'wght' 200;">2023</p>
+    <div style="width: 40%;">
+        <p style="font-family: georama, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:24px; text-decoration:underline;">Getting developers onboard to adopt a design system</p>
+        <p style="margin-top: 40px;font-family: georama, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:32px; font-variation-settings: 'wdth' 80, 'wght' 200;">2023 — 2</p>
     </div>
-    <div style="width: 50%;">
-        <img src="img/stickersheet.png" style="max-width: 100%;" >
+    <div style="width: 60%;background-color: #543054;mix-blend-mode: multiply;" >
+
+       <img src="img/stickersheet.png" style="object-fit: cover; max-height: 200px; mix-blend-mode: multiply;" >
     </div>
 
 </a>
