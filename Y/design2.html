@@ -10,6 +10,8 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght,GRAD@8..144,57,700,59&display=swap" rel="stylesheet">    <link rel="stylesheet" href="/fontsources.css">
 
+
+    <link href="https://fonts.googleapis.com/css2?family=Georama:ital,wdth,wght@0,75,392;1,75,392&display=swap" rel="stylesheet">
   <style>
 
 
@@ -87,6 +89,21 @@
   }
 
 
+
+  .absolute{
+        display: block;
+        position: relative;
+    }
+
+
+    .context_stickyNote{
+        width: 50%;
+    }
+
+    .padding{
+        padding-left: 8px;
+        padding-right: 8px;
+    }
 
   .moreItemsMargin{
       margin-left: 8px;
@@ -537,6 +554,20 @@
   .example {background: blue;}
 
 
+  .absolute{
+      display: block;
+      position: absolute;
+  }
+  .context_stickyNote{
+      width: 25vw;
+      margin-left: -25vw;
+  }
+
+  .padding{
+      padding-left: 2rem;
+      padding-right: 2rem;
+  }
+
   .moreItemsMargin{
       margin-left: 30%;
       margin-right: 2rem;
@@ -822,19 +853,7 @@
     -->
   <!--here's where the real stuff starts-->
 
-  
-  <div class="moreItemsmargin" style=" font-family: georama, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:20px; margin-bottom: 12px;">More from 2023</div>
-<a href="google.com" class="moreItemsMargin moreItems" style="text-decoration: none; padding-top: 20px;display: flex; flex-direction: row; row-gap: 10px;">
 
-    <div style="width: 40%;">
-        <p style="font-family: georama, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:24px; text-decoration:underline;">Getting developers onboard to adopt a design system</p>
-        <p style="margin-top: 40px;font-family: georama, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:32px; font-variation-settings: 'wdth' 80, 'wght' 300;">2023 — 2</p>
-    </div>
-    <div style="width: 60%;background-color: #543054;mix-blend-mode: multiply;" >
-       <img src="img/stickersheet.png" style="object-fit: cover; object-position: left top; max-height: 200px; width: 100%;; mix-blend-mode: multiply;" >
-    </div>
-
-</a>
 
   <div class="containert" style="font-family: georama; padding-bottom: 1vw; border-top: #ffffff00;">
     <div class="cell celot-1" style="height: 7vw;"></div>
@@ -1009,14 +1028,14 @@
 </div>
 
 
-<div class="moreItemsmargin" style=" font-family: georama, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:20px; margin-bottom: 12px;">More from 2023</div>
+<div class="moreItemsmargin" style=" font-family: georama, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:20px; margin-bottom: 12px;">More from 2023:</div>
 <a href="google.com" class="moreItemsMargin moreItems" style="text-decoration: none; padding-top: 20px;display: flex; flex-direction: row; row-gap: 10px;">
 
     <div style="width: 40%;">
-        <p style="font-family: georama, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:24px; text-decoration:underline;">Getting developers onboard to adopt a design system</p>
+        <p style="font-family: georama, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:24px; text-decoration:underline;"> Getting developers onboard to adopt a design system</p>
         <p style="margin-top: 40px;font-family: georama, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:32px; font-variation-settings: 'wdth' 80, 'wght' 300;">2023 — 2</p>
     </div>
-    <div style="width: 60%;background-color: #543054;mix-blend-mode: multiply;" >
+    <div style="width: 60%;background-color: #f0f0f0; mix-blend-mode: multiply;" >
        <img src="img/stickersheet.png" style="object-fit: cover; object-position: left top; max-height: 250px; min-height: 225px ;width: 100%;; mix-blend-mode: multiply;" >
     </div>
 
@@ -1024,18 +1043,28 @@
 
 <!-- first one ends here!-->
 
+<div class="padding">
+
+</div>
 <div id="productWork" class="containerot" style="font-family: georama;">
-  <div class="cell celot-1"><img src="img/context.png" width="80%">
-    <br>
+  <div class="cell celot-1" style="font-size: 3.6vw; font-weight: 392; font-family: georama ; font-variation-settings: 'wdth' 75;">
+      2022
 </div>
   <div class="cell celot-2"></div>
   <div class="cell celot-3"></div>
-  <div class="cell celot-4" style="font-family: 'georama',sans-serif;font-weight: 700; color: black;"> How have we been shaping up the product at Niro</div>
+  <div class="cell celot-4" style="font-family: 'georama',sans-serif;font-weight: 700; color: black;">
+
+      How have we been shaping up the product at Niro
+  </div>
   <div class="cell celot-5">   </div>
   <div class="cell celot-6"></div>
   <div class="cell celot-7"></div>
   <div class="cell celot-8"><div style="border-left:  1px rgba(184, 184, 184, 0) solid; height: 110%; margin-top: -13.5vw;"></div></div>
-  <div class="cell celot-9"><span style="font-style: italic;"> This is a story of my time at Niro. </span>
+  <div class="cell celot-9"><span style="font-style: italic;">
+      <img src="img/context.png"  class="absolute context_stickyNote">
+      <br>
+
+      This is a story of my time at Niro. </span>
     <p>Niro is a company which enables its partner companies to provide financial products on their platform. </p>
     <ol>
     <li>Financial products like: “personal loans”, “credit lines” etc.</li>
