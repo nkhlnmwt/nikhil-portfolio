@@ -1,0 +1,1283 @@
+<html><head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="img/Artbor.png">
+    <title>nkhlnmwt</title>
+    <link rel="stylesheet" href="https://use.typekit.net/kdn1bvr.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700;1,800;1,900&amp;family=Spectral:ital,wght@0,200;0,300;0,600;0,700;1,200;1,300;1,600;1,700&amp;display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght,GRAD@8..144,57,700,59&display=swap" rel="stylesheet">    <link rel="stylesheet" href="/fontsources.css">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Georama:ital,wdth,wght@0,75,392;1,75,392&display=swap" rel="stylesheet">
+  <style>
+
+
+
+    @font-face {
+        font-family: georamaGlyphs;
+        src: url('fonts/Georama[wdth,wght]-1.ttf') format('truetype');
+      }
+      @font-face {
+        font-family: georama-Italic;
+        src: url('fonts/Georama-Italic[wdth,wght]-1.ttf') format('truetype');
+      }
+
+  a {
+    text-decoration: underline;
+    color: black;
+    font-feature-settings: 'ss02' 0, 'ss01' 1;
+
+  }
+  a:hover {
+    text-decoration: underline;
+    font-feature-settings: 'ss02' 1;
+    color: rgb(55, 55, 55);
+  }
+
+  #navbar {
+  background-color: rgba(255, 255, 255, 0.795);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: block;
+  transition: top 0.3s;
+  }
+
+  #navbar a {
+  width: 12.3vw;
+  float: left;
+  display: block;
+  color: #6136c4;
+  text-align: center;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+  text-decoration: none;
+  font-size: 1vw;
+  letter-spacing: 0.3vw;
+  }
+
+  #navbar a:hover {
+  background-color: rgb(247, 240, 255);
+  color: rgb(89, 44, 194);
+  font-style: italic;
+  }
+  @media only screen and (max-width: 600px) {
+  .example {background: red;}
+  #navbar {
+  background-color: rgb(255, 255, 255);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: block;
+  transition: top 0.3s;
+  }
+
+  #navbar a {
+  width: 23.3vw;
+  float: left;
+  display: block;
+  color: #6136c4;
+  text-align: center;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  text-decoration: none;
+  font-size: 1.8vh;
+  letter-spacing: 0.3vw;
+  }
+
+
+
+  .absolute{
+        display: block;
+        position: relative;
+    }
+
+
+    .context_stickyNote{
+        width: 50%;
+    }
+
+    .padding{
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+  .moreItemsMargin{
+      margin-left: 8px;
+      margin-right: 8px;
+  }
+  .moreItems{
+    border-top: solid black 1px;
+    border-bottom:  solid black 1px;
+  }
+  .moreItems:hover{
+
+      border-top: solid beige 1px;;
+      border-bottom: solid beige 1px;;
+      background-color: beige;
+  }
+
+  .container {
+  margin: 8px;
+  display: grid;
+  grid-template-columns: 10fr 10fr 0.1fr ;
+  grid-template-rows: 5vh auto auto auto;
+  grid-gap: 1.5vw 1.5vw;
+  border-top: 1px solid rgb(145, 145, 145);
+  padding-top: 6vh;
+  padding-bottom: 6vh;
+  grid-template-areas:  "text1 text1 gap"
+  "text1 text1 gap"
+  "image1 image2 gap2"
+  "textbelow1 textbelow1 gap2";
+  }
+
+  .containert {
+  margin: 8px;
+  display: grid;
+  grid-template-columns: 10fr 10fr 0.1fr ;
+  grid-template-rows: 22vw auto auto auto;
+  grid-gap: 1.5vw 1.5vw;
+  border-top: 1px solid rgb(145, 145, 145);
+  padding-top: 6vh;
+  padding-bottom: 6vh;
+  grid-template-areas:
+  ". . ."
+  "text1 text1 gap"
+  "textbelow1 textbelow1 gap2";
+  }
+
+  .containerot {
+  margin: 8px;
+  display: grid;
+  grid-template-columns: 20fr 0.1fr 0.1fr ;
+  grid-template-rows: 22vw auto auto auto;
+  grid-gap: 1.5vw 1.5vw;
+  border-top: 1px solid rgb(145, 145, 145);
+  padding-top: 6vh;
+  padding-bottom: 6vh;
+  grid-template-areas:
+  "text1 text1 gap"
+  "image1 image2 gap2"
+  "textbelow1 textbelow1 gap2";
+
+  }
+
+  .containerottt {
+
+    #image {
+    display: block;
+    position: relative;
+    margin-left: -5vw;
+
+    /* direction: rtl; */
+}
+
+#imageWidth {
+  width: 80vw;
+}
+
+
+#threeNotesSvg {
+  display: block; position: relative; width: 95vw;
+}
+
+#title{
+  display: block;
+  padding-bottom: 10vw;
+}
+
+#celotEight{
+  height: 30%;
+}
+
+}
+
+  .cell {
+  color: rgba(0, 0, 0, 0);
+  font-size: 2.4vh;
+  }
+  .cell-1 {
+  background: rgb(255, 255, 255);
+
+  }
+  .cell-2 {
+  background: rgba(255, 68, 0, 0)255, 255);
+
+
+  }
+  .cell-3 {
+  background: rgb(255, 255, 255);
+  grid-row: 1;
+  grid-column: 3;
+
+
+
+  }
+  .cell-4 {
+  color: rgb(0, 0, 0);
+  grid-row: 1;
+  grid-column: 1;
+
+
+  }
+  .cell-5 {
+  background: rgb(255, 255, 255);
+  grid-row: 1;
+  grid-column: 2;
+  height: 15vw;
+
+
+
+  }
+  .cell-6 {
+  background: rgba(50, 205, 50, 0)255, 255);
+
+  }
+  .cell-7 {
+  background: rgba(255, 255, 255, 0);
+
+
+  }
+  .cell-8 {
+  background: rgb(255, 255, 255);
+  grid-row: 2;
+  grid-column: 3;
+
+
+
+  }
+  .cell-9 {
+  font-size: 2.2vh;
+  font-family: spectral, serif;
+  color: black;
+  grid-row: 4;
+  grid-column: 1;
+  font-weight: 400;
+
+
+
+  }
+  .cell-10 {
+    color: black;
+    grid-row: 4;
+  grid-column: 2;
+
+  background: rgba(255, 255, 255, 0);
+  font-size: 1.2vw;
+  font-family: "spectral", georgia, serif;
+
+
+
+  }
+
+  .cell-11 {
+  background: rgb(110, 187, 117);
+
+  }
+
+  .celot-1 {
+  background: rgb(255, 255, 255);
+  grid-area: image1;
+
+
+  }
+
+
+  .celot-2 {
+  background: rgba(255, 68, 0, 0)255, 255);
+  grid-area: image2;
+
+  }
+  .celot-3 {
+  background: rgb(255, 255, 255);
+
+  grid-area: gap1;
+
+  }
+  .celot-4 {
+  color: rgb(0, 0, 0);
+
+  grid-area: text1;
+
+  }
+
+  .celotitle-4 {
+  color: rgb(0, 0, 0);
+  font-size: 6vh;
+
+  grid-area: text1;
+
+  }
+  .celot-5 {
+  background: rgb(255, 255, 255);
+
+  grid-area: text2;
+
+  }
+  .celot-6 {
+  background: rgba(50, 205, 50, 0)255, 255);
+  grid-area: imagebelow1;
+  }
+  .celot-7 {
+  background: rgba(255, 255, 255, 0);
+  grid-area: imagebelow2;
+
+
+  }
+  .celot-8 {
+  background: rgb(255, 255, 255);
+
+  grid-area: gap2;
+
+  }
+  .celot-9 {
+  font-size: 2.2vh;
+  font-family: spectral, serif;
+  color: black;
+
+  font-weight: 400;
+  grid-area: textbelow1;
+
+  }
+  .celot-10 {
+    color: black;
+
+
+  background: rgba(255, 255, 255, 0);
+  font-size: 1.2vw;
+  font-family: "spectral", georgia, serif;
+  grid-area: textbelow2;
+
+  }
+
+  .celot-11 {
+  background: rgb(110, 187, 117);
+
+  }
+
+
+  }
+  @media only screen and (min-width: 600px) {
+  .example {background: blue;}
+
+  .container {
+      margin: 2rem;
+  display: grid;
+  grid-template-columns: 10fr 10fr 0.5fr 10fr 10fr;
+  grid-template-rows: 12vw auto;
+  grid-gap: 1.5vw 1.5vw;
+  padding-top: 6vw;
+  padding-bottom: 6vw;
+  border-top: 1px rgb(182, 182, 182) solid;
+
+  }
+
+  .containert {
+      margin: 2rem;
+  display: grid;
+  grid-template-columns: 10fr 10fr 0.5fr 10fr 10fr;
+  grid-template-rows: 12vw auto;
+  grid-gap: 1.5vw 1.5vw;
+  padding-top: 6vw;
+  padding-bottom: 6vw;
+  border-top: 1px rgb(182, 182, 182) solid;
+
+  }
+
+  .containerot {
+      margin: 2rem;
+  display: grid;
+  grid-template-columns: 10fr 10fr 0.5fr 10fr 10fr;
+  grid-template-rows: 12vw auto;
+  grid-gap: 1.5vw 1.5vw;
+  padding-top: 6vw;
+  padding-bottom: 6vw;
+  border-top: 1px rgb(182, 182, 182) solid;
+
+  }
+
+  .cell {
+  color: rgb(0, 0, 0);
+  }
+  .cell-1 {
+  background: rgba(255, 255, 255, 0);
+  }
+  .cell-2 {
+  background: rgba(255, 255, 255, 0);
+  }
+  .cell-3 {
+  background: rgba(255, 255, 255, 0);
+
+  }
+  .cell-4 {
+    background-color: white;
+  font-size: 1.7vw;
+  style="font-family: georama, sans-serif;
+  font-weight: 700;
+  }
+  .cell-5 {
+  background: rgba(255, 255, 255, 0);
+  }
+  .cell-6 {
+  background: rgba(255, 255, 255, 0);
+  }
+  .cell-7 {
+  background: rgba(255, 255, 255, 0);
+  }
+  .cell-8 {
+  background: rgba(126, 126, 126, 0);
+  }
+  .cell-9 {
+    background-color: white;
+  font-size: 1.2vw;
+  font-family: "spectral", georgia, serif;
+  line-height: 1.8vw;
+  font-weight: 300;
+  padding-top: -15px;
+
+
+  }
+  .cell-10 {
+  background: rgba(255, 255, 255, 0);
+  font-size: 1.2vw;
+  font-family: "spectral", georgia, serif;
+  }
+
+
+    .celot-1 {
+  background: rgb(255, 255, 255);
+  grid-area: image1;
+      height: 4.5vw;
+
+
+  }
+
+
+  .celot-2 {
+  background: rgba(255, 68, 0, 0)255, 255);
+  grid-area: image2;
+          height: 4.5vw;
+
+
+  }
+  .celot-3 {
+  background: rgb(255, 255, 255);
+
+  grid-area: gap1;
+
+
+  }
+  .celot-4 {
+  color: rgb(0, 0, 0);
+
+  grid-area: text1;
+
+  }
+
+  .celotitle-4 {
+  color: rgb(0, 0, 0);
+  font-size: 6vh;
+
+  grid-area: text1;
+
+
+  }
+  .celot-5 {
+  background: rgb(255, 255, 255);
+
+  height: 15vw;
+  grid-area: text2;
+
+
+
+  }
+  .celot-6 {
+  background: rgba(50, 205, 50, 0)255, 255);
+  grid-area: imagebelow1;
+
+  }
+  .celot-7 {
+  background: rgba(255, 255, 255, 0);
+  grid-area: imagebelow2;
+
+
+
+
+  }
+  .celot-8 {
+  background: rgb(255, 255, 255);
+
+  grid-area: gap2;
+
+
+
+  }
+  .celot-9 {
+  font-size: 2.2vh;
+  font-family: spectral, serif;
+  color: black;
+
+  font-weight: 400;
+  grid-area: textbelow1;
+
+
+
+  }
+  .celot-10 {
+    color: black;
+
+
+  background: rgba(255, 255, 255, 0);
+  font-size: 1.2vw;
+  font-family: "spectral", georgia, serif;
+  grid-area: textbelow2;
+
+
+
+  }
+
+  .celot-11 {
+  background: rgb(110, 187, 117);
+
+
+  }
+
+
+  }
+
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+  .example {background: blue;}
+
+
+  .absolute{
+      display: block;
+      position: absolute;
+  }
+  .context_stickyNote{
+      width: 25vw;
+      margin-left: -25vw;
+  }
+
+  .padding{
+      padding-left: 2rem;
+      padding-right: 2rem;
+  }
+
+  .moreItemsMargin{
+      margin-left: 30%;
+      margin-right: 2rem;
+  }
+  .moreItemsMargin:hover{
+      margin-left: 25%;
+      padding-left: 5%;
+      margin-right: 2rem;
+  }
+
+  .moreItems{
+    border-top: solid black 1px;
+    border-bottom:  solid black 1px;
+  }
+  .moreItems:hover{
+
+      border-top: solid beige 1px;;
+      border-bottom: solid beige 1px;;
+      background-color: beige;
+  }
+
+
+  .container {
+  display: grid;
+  grid-template-columns: 10fr 10fr 0.5fr 10fr 10fr;
+  grid-template-rows: 12vw auto;
+  grid-gap: 1.5vw 1.5vw;
+  padding-top: 6vw;
+  padding-bottom: 6vw;
+  border-top: 1px rgb(182, 182, 182) solid;
+  grid-template-areas:
+  "image1 image1 gap text1 text2"
+  "imagebelow imagebelow2 gap2 textbelow1 textbelow2";
+
+  }
+
+  .containert {
+    margin: 2rem;
+  display: grid;
+  grid-template-columns: 10fr 10fr 0.5fr 10fr 10fr;
+  grid-template-rows: auto auto;
+  grid-gap: 0vw 1.5vw;
+  padding-top: 6vw;
+  padding-bottom: 6vw;
+  border-top: 1px rgb(182, 182, 182) solid;
+  grid-template-areas:
+  "image1 image2 gap text1 text2"
+  "imagebelow imagebelow2 gap2 textbelow1 textbelow1";
+
+  }
+
+  .containerti {
+    margin: 2rem;
+  display: grid;
+  grid-template-columns: 10fr 10fr 10fr 10fr;
+  grid-template-rows: auto auto;
+  grid-gap: 0vw 1.5vw;
+  padding-top: 6vw;
+  padding-bottom: 6vw;
+  border-top: 1px rgb(182, 182, 182) solid;
+  grid-template-areas:
+  "image1 image2 gap text1"
+  "text2 gap2 imagebelow1 imagebelow2";
+
+  }
+
+  .containerot {
+    margin: 2rem;
+  display: grid;
+  grid-template-columns: 5fr 5fr 0.5fr 20fr 10fr;
+  grid-template-rows: 12vw auto;
+  grid-gap: 1.5vw 1.5vw;
+  padding-top: 6vw;
+  padding-bottom: 6vw;
+  border-top: 1px rgb(182, 182, 182) solid;
+  grid-template-areas:
+  "image1 image1 gap text1 text2"
+  "imagebelow imagebelow2 gap2 textbelow1 textbelow2";
+  }
+  .containerottt {
+    margin: 2rem;
+  display: grid;
+  grid-template-columns: 10fr 5fr 0.5fr 20fr 5fr;
+  grid-template-rows: 12vw auto;
+  grid-gap: 1.5vw 1.5vw;
+  padding-top: 6vw;
+  padding-bottom: 6vw;
+  border-top: 1px rgb(182, 182, 182) solid;
+  grid-template-areas:
+  "image1 image1 gap text1 text2"
+  "imagebelow imagebelow2 gap2 textbelow1 textbelow2";
+  }
+
+  .cell {
+  color: rgb(0, 0, 0);
+  }
+  .cell-1 {
+  background: rgba(255, 255, 255, 0);
+  }
+  .cell-2 {
+  background: rgba(255, 255, 255, 0);
+  }
+  .cell-3 {
+  background: rgba(255, 255, 255, 0);
+
+  }
+  .cell-4 {
+    background-color: white;
+  font-size: 1.7vw;
+  style="font-family: georama, sans-serif;
+  font-weight: 700;
+  max-width: 20vw;
+  }
+  .cell-5 {
+  background: rgba(255, 255, 255, 0);
+  }
+  .cell-6 {
+  background: rgba(255, 255, 255, 0);
+  }
+  .cell-7 {
+  background: rgba(255, 255, 255, 0);
+  }
+  .cell-8 {
+  background: rgba(126, 126, 126, 0);
+  }
+  .cell-9 {
+    background-color: white;
+  font-size: 1.2vw;
+  font-family: "spectral", castoro ,georgia, serif;
+  line-height: 1.8vw;
+  font-weight: 300;
+  padding-top: -15px;
+
+  }
+  .cell-10 {
+  background: rgba(255, 255, 255, 0);
+  font-size: 1.2vw;
+  font-family: "spectral", georgia, serif;
+  }
+
+  .celot-1 {
+  background: rgba(255, 255, 255, 0);
+  grid-area: image1;
+    height: 7vw;
+  }
+  .celot-2 {
+  background: rgba(255, 255, 255, 0);
+  grid-area: image2;
+
+  }
+  .celot-3 {
+  background: rgba(255, 255, 255, 0);
+  grid-area: gap;
+
+
+  }
+
+  .celotitle-4 {
+    background-color: white;
+  font-size: 6vw;
+  style="font-family: georama, sans-serif;
+  font-weight: 700;
+  max-width: 20vw;
+  grid-area: text1;
+  }
+
+  .celot-4 {
+    background-color: white;
+  font-size: 1.7vw;
+  style="font-family: georama, sans-serif;
+  font-weight: 700;
+  max-width: 20vw;
+  grid-area: text1;
+
+  }
+  .celot-5 {
+  background: rgba(255, 255, 255, 0);
+  grid-area: text2;
+        height: 7vw;
+
+
+  }
+  .cell-6 {
+  background: rgba(255, 255, 255, 0);
+  grid-area: imagebelow;
+  }
+  .celot-7 {
+  background: rgba(255, 255, 255, 0);
+  grid-area: imagebelow2;
+
+  }
+  .celot-8 {
+  background: rgba(126, 126, 126, 0);
+  grid-area: gap2;
+
+  }
+  .celot-9 {
+    background-color: white;
+  font-size: 1.3vw;
+  font-family: "spectral", georgia, serif;
+  line-height: 1.9vw;
+  font-weight: 300;
+  padding-top: -15px;
+
+  grid-area: textbelow1;
+
+
+  }
+  .celot-10 {
+  background: rgba(255, 255, 255, 0);
+  font-size: 1.2vw;
+  font-family: "spectral", georgia, serif;
+  grid-area: textbelow2;
+
+  }
+
+  #image {
+    display: block;
+    position: absolute;
+    /* direction: rtl; */
+    left: 0;
+    padding-left: 5vw;
+}
+
+
+#text:hover + #image {
+    display: block;
+}
+#imageWidth {
+  width: 40vw;
+}
+
+#threeNotesSvg {
+  display: block; position: relative; margin-left: -20vw; width: 66.6vw;
+}
+#title{
+  display: none;
+}
+
+#celotEight{
+  height: 110%;
+}
+
+  }
+
+  </style></head>
+
+  <body data-new-gr-c-s-check-loaded="8.898.0" data-gr-ext-installed="">
+    <div id="navbar" style="font-family: georama, sans-serif; box-shadow: rgb(219, 219, 255) 1px 0.5px 2px; top: -5vw;">
+      <a href="design.html"> HOME</a>
+      <a href="about.html">ABOUT ME</a>
+        <a href="Resume_Nikhil.pdf" target="_blank">RESUME →</a>
+        <a href="illustrations.html">OTHER WORK</a>
+
+      </div>
+    <!--
+    <div class="container" style="font-family: georama;">
+        <div class="cell cell-1">1.</div>
+        <div class="cell cell-2">2.</div>
+        <div class="cell cell-3"></div>
+        <div class="cell cell-4" style="font-family: 'georama',sans-serif;">4. title of the thing</div>
+        <div class="cell cell-5" ><img style="width: 30%;" src="img/stamp.svg"></img></div>
+        <div class="cell cell-6">6.</div>
+        <div class="cell cell-7">7.</div>
+        <div class="cell cell-8"><div style="border-left:  1px rgb(184, 184, 184) solid; height: 110%; margin-top: -13.5vw;"></div></div>
+        <div class="cell cell-9">9. This poster and the one on the next page were made as a part of the marketing campaign for a co-working space “Work365”. Work365 told me that they feel that other co-working spaces are offering too many side activities which don’t really contribute to working, and they want to target people who think the same and want to get work at a place that is more invested in improving their work, like taking care of ample space for desks. The illustration is showing the extra-activities occupying all the space that it is being a barrier for the person with the laptop to do work. </div>
+        <div class="cell cell-10">10.</div>
+        <div class="cell cell-11" style="height: 0vw;"> </div>
+      </div>
+      <div class="container" style="font-family: georama, sans-serif;">
+        <div class="cell cell-1" style="color:rgb(184, 184, 184)">1.</div>
+        <div class="cell cell-2">2.</div>
+        <div class="cell cell-3">3.</div>
+        <div class="cell cell-4" style="font-family: 'georama',sans-serif;">title of the second thing</div>
+        <div class="cell cell-5">5.</div>
+        <div class="cell cell-6">6.</div>
+        <div class="cell cell-7">7.</div>
+        <div class="cell cell-8">8.</div>
+        <div class="cell cell-9">9.</div>
+        <div class="cell cell-10">10.</div>
+        <div class="cell cell-11" style="height: 0vw;"> </div>
+      </div>
+    -->
+  <!--here's where the real stuff starts-->
+
+
+
+  <div class="containert" style="font-family: georama; padding-bottom: 1vw; border-top: #ffffff00;">
+    <div class="cell celot-1" style="height: 7vw;"></div>
+    <div class="cell celot-2" style="height: 7vw;"></div>
+    <div class="cell celot-3"></div>
+  <div class="cell celotitle-4" style="width: 45vw; font-weight: 800; font-size: 4vw;font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif,sans-serif;"> <s style="font-size: 3vw; font-weight: 500;">Portfolio&nbsp;</s> <br> Glimpse&nbsp;Into&nbsp;Work
+
+  </div>
+    <div class="cell celot-5" style="height: 7vw;"></div>
+    <div class="cell celot-6"></div>
+    <div class="cell celot-7"></div>
+    <div class="cell celot-8" ><div style="border-left:  1px rgba(172, 112, 112, 0) solid;  margin-top: -13.5vw;" id="celotEight"></div></div>
+    <div class="cell celot-9" style="font-style:italic; width: 80%;">Nikhil is a Product Designer and Researcher. He's also worked as an illustrator previously.
+        <!-- Below you see an index for the website. -->
+    </div>
+    <div class="cell celot-10"></div>
+    <div class="cell celot-11" style="height: 0vw;"> </div>
+
+  </div>
+
+  <!--here's where the index starts-->
+
+  <!-- <div class="containerti" style=" padding-bottom: 1vw;    color: #543054;
+; text-decoration: none;
+  font-family: 'roboto serif', serif; font-weight: 200; font-size: 1.45vw;">
+      <div class="cell celot-1" style=" border-top: 1px  rgba(172, 112, 112, 0) ;">
+       <a href="#productWork" ><span style="font-family: roboto serif, georgia, serif; color: #543054;"> 1.</span> Shaping the product at Niro.money</a>
+        <span media="(max-width: 600px)"><br></span>
+        </div>
+      <div class="cell celot-2" >
+         <a href="#userInterviews" ><span style="font-family: roboto serif, georgia, serif; color: #543054;">2.</span> The power of learning<br>from user interviews</a>
+        <span media="(max-width: 600px)"><br></span>
+
+        </div>
+      <div class="cell celot-3">
+        <a href="#medicine" ><span style="font-family: roboto serif, georgia, serif; color: #543054;">3.</span>  Design system implementation for app</a>
+        <span media="(max-width: 600px)"><br></span>
+
+      </div>
+    <div class="cell celot-4">
+    </div>
+      <div class="cell celot-5">
+        <a href="#instamojo" ><span style="font-family: roboto serif, georgia, serif; color: #543054;">4.</span> Showcasing implementation of a design system for web</a>
+        <span media="(max-width: 600px)"><br></span>
+
+      </div>
+      <div class="cell celot-6">
+        <a href="Trekking_product_design.html" target="_blank" style="min-height: 4.5vw" ><span style="font-family: roboto serif, georgia, serif; color: #543054;">6.</span> Product Design Case Study (⭐️ recommend reading) ↗</a>
+        <span media="(max-width: 600px)"><br></span>
+
+      </div>
+      <div class="cell celot-7">
+
+      </div>
+      <div class="cell celot-8">
+        <a href="#cendrol"><span style="font-family: roboto serif, georgia, serif; color: #543054;">5.</span> Organizing an information <br> heavy website</a>
+        <span media="(max-width: 600px)"><br></span>
+      </div>
+    </div> -->
+
+
+<!--here's where the product design study starts-->
+
+
+
+
+
+<div id="productWork" class="containerottt" style="font-family: georama;">
+  <div class="cell celot-1" style="color: black; margin-top: 10vh;" id="title">1. Introduction to a feature, we worked at Jollee, (<i>as you read this you'll realise what the work was like</i>)</div>
+  <div class="cell celot-2"></div>
+  <div class="cell celot-3"><div style="width: 210%; font-size: 1.5vw;">1. Introduction to a feature, we worked at Jollee, (<i>as you read this you'll realise what the work was like</i>)</div>
+</div>
+  <div class="cell celot-4" style="font-family: 'georama',sans-serif;font-weight: 700; background-color: rgba(240, 248, 255, 0);"> </div>
+  <div class="cell celot-5">   </div>
+  <div class="cell celot-6"> </div>
+  <div class="cell celot-7"> </div>
+  <div class="cell celot-8"> <div style="border-left:  1px rgba(184, 184, 184, 0) solid; margin-top: -13.5vw;"></div></div>
+  <div class="cell celot-9" > <article id="8a94897a-789e-429e-84a4-f129b722f63b" class="page sans" style="padding-left: 1vw; border-left:  2px rgb(184, 141, 68) solid; color: rgb(62, 44, 13); font-family: 'source sans 3', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif,sans-serif; font-weight: 400;"><div class="page-body"><p id="5bbcb306-0b00-49e3-98e5-5404726e4475" class="">Drashta is a recent mom. She has this feeling that she&#x27;s missing out on something.  While browsing through youtube she comes across a video about nutrition. In the video she also hears that she can start can start solid foods at about 6 months. her baby will be turn 6 months next months, so this piques her interest. so she finishes watching everything about solid foods too.</p><p id="82984728-fa94-48a3-b720-9afecea48c49" class="">After some days, she again looks at her youtube, and notices a video titled &quot;using toys for emotional growth&quot;. She feels inadequate that she doesn&#x27;t know anything about this. soon enough more topics like this come up. despite of having this, she feels this fear of missing something important, something that can be covered only if she knew it.However much she reads, or watches, this feeling doesn&#x27;t go away.</p><p id="03cf5522-7096-43ba-9f38-15e6d4ccbfaf" class="">Now she comes across this course (on our website, Jollee),here&#x27;s what goes in her brain in the next 30 seconds:
+
+
+    </p><ul id="cd7c98fb-ce0a-4efc-b776-e8c87f6db520" class="bulleted-list"><li style="list-style-type:disc">
+    <div id="image">
+      <img id = "imageWidth"
+        style="
+          border-top:1vw rgb(255, 255, 255) solid;
+          border-bottom:  1vw rgb(255, 255, 255) solid;"
+      src="img/sketch_of_course_product.jpg">
+    </div>First thing she notices is the title of the video, the title says &quot;Things I wish I knew before i became a parent&quot;</li></ul><ul id="42776a2c-f5dc-49fd-9434-d9b727f55523" class="bulleted-list"><li style="list-style-type:disc">Secondly she sees, it&#x27;s recommended by someone like an <strong>expert</strong>.</li></ul><ul id="375025df-ae1f-4d5e-9794-19640a9835d2" class="bulleted-list"><li style="list-style-type:disc">She scrolls a little bit, and sees another video, that talks about &quot;15 things to know about parenting.&quot;</li></ul><ul id="d70889f6-50a3-484c-84e9-a5d5d183c40a" class="bulleted-list"><li style="list-style-type:disc">She also notices that there&#x27;s a <strong>Workbook</strong> section towards the end. the Workbook has a bunch of questions, and she can answer the questions in the app itself.</li></ul><ul id="b598801f-3d62-431c-992d-26a56274c3a5" class="bulleted-list"><li style="list-style-type:disc">She&#x27;s easily able to answer most of the questions from the <strong>workbook</strong>, but there are a few questions she&#x27;s having trouble with. She gets this feeling to be able to answer all the questions easily. that is something that she looks forward to.</li></ul><ul id="96e846b4-b4df-4094-bed9-3bfd5ddea4dd" class="bulleted-list"><li style="list-style-type:disc">In first look, the course appears extensive enough to her. but not unnecessarily long. more importantly, she feels like &quot;If I do this course, I won&#x27;t have that feeling of looking at every other thing on youtube.&quot; thus, even though this looks time-consuming, she decides to start it.</li></ul><p id="fa43d68e-8b45-4850-bb61-e5d457bf7563" class="">
+    </p></div></article>
+
+    <p>What's this writeup above? this is the end product we wanted, but we are not gonna capable of writing these questions and videos. So, I sent this writeup to a parenting expert and asked them to suggest content, such that the parent scrolling through this, feels all this. </p></br>
+    <p>After they made some efforts to think of a course like this, I suggested some guidelines. (<i>I'm essentially asking them to do product design without any experience</i>)</p>
+    </br>
+    <p>I must highlight the thing that i'm most proud of in this project was the communication to the doctor. Making them come up with product ideas. This required focused listening, sharp communication, and a bunch of enthusiasm, that it gets spilled into them.
+
+    <br></br>
+      <div  style="width: 40vw;"><img id="threeNotesSvg" src="img/3notes.svg" alt=""></div>
+    </p>
+
+    <br>
+    <p>finally we ended up with the following experience, with the content that was provided by them.
+      <br>
+      <div ><img style="width: 100%;" src="img/coursesinapp.jpg" alt=""></div>
+
+    </p>
+    <br>
+
+
+    </div>
+
+
+
+
+
+  <div class="cell cell-10"></div>
+  <div class="cell cell-11" style="height: 0vw;"> </div>
+
+</div>
+
+
+<div class="moreItemsmargin" style=" font-family: georama, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:20px; margin-bottom: 12px;">More from 2023:</div>
+<a href="design3.html#jollee2" class="moreItemsMargin moreItems" style="text-decoration: none; padding-top: 20px;display: flex; flex-direction: row; row-gap: 10px;">
+
+    <div style="width: 40%;">
+        <p style="font-family: georama, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:24px; text-decoration:underline;"> Getting developers onboard to adopt a design system</p>
+        <p style="margin-top: 40px;font-family: georama, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:32px; font-variation-settings: 'wdth' 80, 'wght' 300;">2023 — 2</p>
+        <p style="font-family:georama, 'segoe ui', Verdana, Geneva, Tahoma, sans-serif; font-variation-settings: 'wght' 300; font-size: 16px;">Ecommerce</p>
+    </div>
+    <div style="width: 60%;background-color: #f0f0f0; mix-blend-mode: multiply;" >
+       <img src="img/stickersheet.png" style="object-fit: cover; object-position: left top; max-height: 250px; min-height: 225px ;width: 100%;; mix-blend-mode: multiply;" >
+    </div>
+
+</a>
+
+
+<!-- first one ends here!-->
+
+<div class="padding">
+
+</div>
+<div id="productWork" class="containerot" style="font-family: georama;">
+  <div class="cell celot-1" style="font-size: 3.6vw; font-weight: 200; font-family: georama ;">
+      <span style="font-variation-settings:'wght' 300;">2022</span> <br>
+      <span style="font-variation-settings:'wght' 300; font-size: 16px;">Fintech</span>
+
+</div>
+  <div class="cell celot-2"></div>
+  <div class="cell celot-3"></div>
+  <div class="cell celot-4" style="font-family: 'georama',sans-serif;font-weight: 700; color: black;">
+
+      2. How have we been shaping up the product at Niro
+  </div>
+  <div class="cell celot-5">   </div>
+  <div class="cell celot-6"></div>
+  <div class="cell celot-7"></div>
+  <div class="cell celot-8"><div style="border-left:  1px rgba(184, 184, 184, 0) solid; height: 110%; margin-top: -13.5vw;"></div></div>
+  <div class="cell celot-9"><span style="font-style: italic;">
+      <img src="img/context.png"  class="absolute context_stickyNote">
+      <br>
+
+      This is a story of my time at Niro. </span>
+    <p>Niro is a company which enables its partner companies to provide financial products on their platform. </p>
+    <ol>
+    <li>Financial products like: “personal loans”, “credit lines” etc.</li>
+    <li>By providing the technology and the experience to make this happen smoothly, but it doesn’t just do the software, it also provides the lending partners.</li>
+    </ol>
+    <p>After launching the PL product we saw that “many people were dropping off without activating their loans (i.e. they were dropping off before confirming their phone number)”. To solve this problem, we approach this from multiple angles:</p>
+    <p>We approached the problem in three ways: 1, 2, and 3. </p>
+    <ol>
+    <li><p>Doing the obvious improvements, that are a must. First just trying to fix the problems that we saw in the UI and then talking to users (35 of them). a. Let’s try to fix the problems that we see are the problems, run those initial versions (general improvements, loan amount see immediately, gif the was the wrong metaphor, optimized for smaller phones ): main problems we discovered were: 1. The gift box not really being the right metaphor for “pre-approved loans”, “Optimizing for smaller screens”, “more consistency in the visuals” b. Making guesses around where must they be stuck, looking at their problems (you’ll see what those were below).</p>
+      <img src="img/inflesh.png" style="width: 120%; margin-left: -5vw;"> </li>
+    <li><p>Selecting the users and taking to them getting what they were stuck at and making a solution for them. Then talking to the users after implementing the obvious improvements and understanding where they were stuck.
+    We chose the people who showed some interest by going to the “second screen”, multiple times, but never went further. Talked to 35 in total, between me and the APM.
+    Talk to people, learn from the data on mixpanel and improve again. (Experiments)
+    They don’t understand what a preapproved loan is: easy access explainer
+    They don’t have an immediate reason to take the loan.: Timer, coupons
+    New brand, they don’t trust: 2 solutions, RBI logo and a design system that they’ve seen in most trusted products.
+    Telling them more enthusiastically that they’ve got a loan. And that it’s not any ordinary loan.
+    Even after this we just saw an improvement of 5% (between the first screen and the second).</p>
+    <img src="img/mindmap.png" style="width: 100%;"></li>
+    <li><p>Designing a method to test whether the users who are coming in here, will they be attracted if the interest rate went down.
+     Trying to do some adjustments at the Risk side:
+    — The reason this was done was because we wanted to check if the partners are giving us the right data and customers to us?
+    — So we ran this experiment where we gave out loans at 12 percent instead of 18% as we were giving initially. This is comparable to the competitors in the market, whereas that 18% is more like BNPL and not personal loan. We did this for 2 reasons:</p>
+    <ol>
+    <li>We wanted to check if what we are doing even works at all?</li>
+    <li>We wanted to make sure that even if it doesn&#39;t work here, will it work when we have a lending partner giving loans for lower rates.</li>
+    </ol>
+    </li>
+    </ol>
+    <p>Here we categorized them in CatA, B, C and D (A,B = income:60k+), and we set a bunch of targets around what we’ll call as success, we ran it for 600 people. categorization was required because we could see that A and B were not really showing any interest in the loan. infact one of the targets was to get catA, B to C, D level. It did succeed, did better than our initial assumed values.  </p>
+    <p>That was all about actively putting trying out ideas to increase
+    Making changes at the Marketing side
+    At the same time we started categorization in the marketing campaigns as well. (different copies)
+    That resulted better than we expected. 6%, so we double downed on that, i.e. by tagging them with IVR and whatsapp etc, even though it was a tech effort.</p>
+    <p>Finally with the help of all of these factors a total increase to 10% (of the list that we get from Quikr) went ahead, to phone number confirmation. (the fact that people did talk to them to give a better list also helped.)</p>
+
+
+  </div>
+
+
+
+
+
+  <div class="cell cell-10"></div>
+  <div class="cell cell-11" style="height: 0vw;"> </div>
+
+</div>
+
+
+
+
+<!--here's where the lsq stuff starts-->
+<div id="userInterviews" class="container" style="font-family: georama;">
+  <div class="cell cell-1"><img src="img/ops_lat_long.jpg" width="207%"><br><br><img src="img/ops_walkthrough.gif" width="207%">  <img src="img/ops_user-interview-notes.png" style="padding-top: 1.5vw;" width="100%">
+    <br>
+    <span style="font-style: italic; font-family: spectral;">Notes from the usability testing/session observing the user on a call, which was later digitised in google docs</span></div>
+  <div class="cell cell-2"></div>
+  <div class="cell cell-3"></div>
+  <div class="cell cell-4" style="font-family: 'georama',sans-serif;font-weight: 700;">Enterprise tool design. User interviews helped the most. </div>
+  <div class="cell cell-5"><img style="width: 30%;" src="img/stamp.svg">   </div>
+  <div class="cell cell-6"></div>
+  <div class="cell cell-7"></div>
+  <div class="cell cell-8"><div style="border-left:  1px rgb(184, 184, 184) solid; height: 110%; margin-top: -13.5vw;"></div></div>
+  <div class="cell cell-9">Context: Operation teams are usually a part of banks of companies, they are responsible for both collecting the money back, and for verifying a person’s details, that the machine cannot do.<br><br>The task was To design a tool that makes it easier for ops teams to capture and read the relevent data faster. Thus making them more efficient.
+
+    <br><br>Steps involved:
+    <br>- Understanding the constraints from the tech. (they can only load a certain amount of data)
+    <br>- Catagorising the data along with the product managers.
+    <br>
+  <img src="img/ops_miro.png" style="padding-top: 1.5vw;" width="207%">
+  <span style="font-style: italic;">Catagorizing the data on the miro board.</span>
+  <br>
+    <br>-Then some main designs decisions were explored, “whether to make a page that works both as an ‘edit mode’, and ‘view mode’ like notion” or to keep the different modes saparate. So these choises were made based on our assumptions about how the users will behave.
+    <br>-User interviews: since it's an internal product, so I asked one of the Ops dept person to go through the journey, in the existing, app, that was not as efficient. (and also understood what their concerns were.) A bunch of notes we found out from that: like what are the activities they usually record at the same time, What happens on call1 vs call2. The page on the right shows the notes from the same session. This was the fastest way to get insight into what they do, what the painpoints are, what information do they usually fill before the call, what info they look for, their workflows.
+
+
+<br>-Finding a front-end framework, that will have matching UI elements to avoid making things from scratch. (we went with Fluent UI)
+  <br>
+
+
+  </div>
+  <div class="cell cell-10"></div>
+  <div class="cell cell-11" style="height: 0vw;"> </div>
+
+</div>
+
+
+
+<!--here's where the lsq stuff ends-->
+
+      <div id="medicine" class="container" style="font-family: georama, sans-serif;">
+        <div class="cell cell-1">
+            <img src="img/Group 1.jpg" width="100%">
+            <img src="img/screen-4.jpg" style="padding-top:1.5vw" width="100%">
+        </div>
+        <div class="cell cell-2"><img src="img/screen-6.jpg" width="100%"><img src="img/screen-5.jpg" style="padding-top:1.5vw;" width="100%"></div>
+        <div class="cell cell-3"></div>
+        <div class="cell cell-4" style="font-family: 'georama',sans-serif; font-weight: 700;">UI Design for an ecommerce medicine app, material design.</div>
+        <div class="cell cell-5"><img style="width: 30%;" src="img/mock.svg"></div>
+        <div class="cell cell-6"></div>
+        <div class="cell cell-7"></div>
+        <div class="cell cell-8"><div style="border-left:  1px rgb(184, 184, 184) solid; height: 123.3%; margin-top: -13.5vw;"></div></div>
+        <div class="cell cell-9">Functional Requirements: Making the interactions familiar. Making it accessible i.e. color contrast to typescale. So considering these requirements the typescale, colors, and components are used as per Material design guidelines along with a couple of patterns that have emerged (and have been made familiar) in Indian marketspace because of apps like Swiggy (the filter app).
+  <br><br>
+            Branding: Since this is a medical app, the voice of the app can’t go as fun as  a meditation app or an app with friends. Other than this theming is been done as an extension of the 1mg brand itself.
+            <br><br><br><br><br><br>
+            <img src="img/assets.jpg" style="padding-top: 1.5vw; padding-bottom: 8.2vw;" width="207%">
+             </div>
+        <div class="cell cell-10"><img src="img/sign_in_1mg.jpg" width="100%"><img src="img/detail-1.jpg" style="padding-top: 1.5vw;" width="100%"></div>
+        <div class="cell cell-11" style="height: 0vw;"> </div>
+
+  </div>
+
+        <!--here's where the 2nd real stuff starts-->
+
+        <div id="instamojo" class="container" style="font-family: georama;">
+            <div class="cell cell-1"><img src="img/long.jpg" width="207%"><br><br><img src="img/below_long.jpg" width="207%"></div>
+            <div class="cell cell-2"></div>
+            <div class="cell cell-3"></div>
+            <div class="cell cell-4" style="font-family: 'georama',sans-serif;font-weight: 700;">Website Template design using IBM’s CarbonDesignSystem. UI project/implement design system</div>
+            <div class="cell cell-5"><img style="width: 30%;" src="img/stamp.svg">   <img style="width: 30%;" src="img/recommed.svg"></div>
+            <div class="cell cell-6"></div>
+            <div class="cell cell-7"></div>
+            <div class="cell cell-8"><div style="border-left:  1px rgb(184, 184, 184) solid; height: 110%; margin-top: -13.5vw;"></div></div>
+            <div class="cell cell-9">The Client asked to design a template for people to choose for their webstore.<br>Since a lot of their existing tempelates already looked very similar, as they were all webstores, and many of them had styling influences from Material design, so I decided to add more variablity to it I’m gonna use Carbon design System.
+                <br><br>1. One of the things that differentiates the carbon design system from some of the ones is its 16 coloumn system (1080+)
+            <br>
+            <img src="img/showing_16_grid.jpg" style="padding-top: 1.5vw;" width="207%">
+            <br><br>
+            2. another thing is that the components take get reshaped based on pixels and the variable grid size.
+            <br>
+            <br>
+            3. a couple of screens from the mobile version. and some design details
+            <br>
+            <img src="img/last_mojo.jpg" style="padding-top: 1.5vw;padding-bottom: 32.5vw;" width="207%">
+
+
+            </div>
+            <div class="cell cell-10">10.</div>
+            <div class="cell cell-11" style="height: 0vw;"> </div>
+
+          </div>
+
+          <!-- comment this out again here's where the 3rd real stuff starts-->
+          <!--
+cendrol copy for refrencing cell numbers
+          <div class="container" style="font-family: georama;">
+            <div class="cell cell-1"><img src="img/ced.png" style="width: 207%; border-bottom: rgb(134, 134, 134) 1px solid;"></img><br><br><img src="img/phone_cendrol.jpg" style="width: 100%; border-bottom: rgb(134, 134, 134) 1px solid;"></img></div>
+            <div class="cell cell-2" style="color: black;">2.</div>
+            <div class="cell cell-3"style="color: black;">3.</div>
+            <div class="cell cell-4" style="font-family: 'georama',sans-serif;font-weight: 700;">4. Cendrol, Information architecture and some UX</div>
+            <div class="cell cell-5" style="color: black;">5.<img style="width: 30%;" src="img/stamp.svg"></img>   <img style="width: 30%;" src="img/recommed.svg" ></img></div>
+            <div class="cell cell-6"style="color: black;">6.</div>
+            <div class="cell cell-7"style="color: black;">7.</div>
+            <div class="cell cell-8"style="color: black;">8.<div style="border-left:  1px rgb(184, 184, 184) solid; height: 110%; margin-top: -13.5vw;"></div></div>
+            <div class="cell cell-9">9.Cendrol is a construction company. Cendrol wanted to digitize the packages they were distributing to their leads. the Packages contained information about their different offerings for building a house. <br><br>They started doing it with sending out pdfs for the different plans, which was hard for customers to scan through, especially while comparing thier plans. It wasn’t just a bad experience, but also didn’t make business sense since it was harder for them show them the advantages in the “Luxury+” plan compared to the “premium+”.
+                <br><br><br>1. first step was to write down all the information, to make sense of what information belong to what.
+                <br><br>one of the outcomes of writing it down was the realisation that a lot of the information was repetative, what needed to be written again and again, and what didnt. <br><br><br><br>2. started laying it out with keeping in mind that it could be beneficail if we only wrote what differered in the different pricing plans instead of writing everything again.
+                <img src="img/this_came_up.png" style="width: 207%;"></img>
+                <br><br>
+                3. The problem was that there was not enough space to put all the data into all the coloumns.Finally we realised that it will make be much easiar to scan if we did it using a website. <br>A possible solution came up
+                <img src="img/Group80.png" style="width: 207%; border-bottom: rgb(134, 134, 134) 1px solid;"></img>
+                <br><br>
+                Hovering for the desktop version and a set of radio switches for the mobile version.
+                <img src="img/controls_cendrol.jpg" style="width: 107%;"></img></div>
+            <div class="cell cell-10"style="color: black;">10.What it looked like before:<img src="img/before.jpg" style="width: 85%;"></img><img src="img/writing.jpg" style="width: 70%; padding-top: 1.5vw;"></img>
+            <div class="cell cell-11" style="color: black;" style="height: 0vw;">
+
+            </div>
+
+          </div>
+        </div>-->
+
+
+          <div id="cendrol" class="container" style="font-family: georama;">
+            <div class="cell cell-1"><img src="img/ced.png" style="width: 207%; border-bottom: rgb(134, 134, 134) 1px solid;"><br><br><img src="img/phone_cendrol.jpg" style="width: 100%; border-bottom: rgb(134, 134, 134) 1px solid;"></div>
+            <div class="cell cell-2" style="color: black;"></div>
+            <div class="cell cell-3" style="color: black;"></div>
+            <div class="cell cell-4" style="font-family: 'georama',sans-serif;font-weight: 700;">5. Cendrol, Information architecture and some UX</div>
+            <div class="cell cell-5" style="color: black;"><img style="width: 30%;" src="img/stamp.svg">   <img style="width: 30%;" src="img/recommed.svg"></div>
+            <div class="cell cell-6" style="color: black;"></div>
+            <div class="cell cell-7" style="color: black;"></div>
+            <div class="cell cell-8" style="color: black;"><div style="border-left:  1px rgb(184, 184, 184) solid; height: 110%; margin-top: -13.5vw;"></div></div>
+            <div class="cell cell-9">Cendrol is a construction company. Cendrol wanted to digitize the packages they were distributing to their leads. the Packages contained information about their different offerings for building a house. <br><br>They started doing it with sending out pdfs for the different plans, which was hard for customers to scan through, especially while comparing thier plans. It wasn’t just a bad experience, but also didn’t make business sense since it was harder for them show them the advantages in the “Luxury+” plan compared to the “premium+”.
+                <br><br><br>1. first step was to write down all the information, to make sense of what information belong to what.
+                <br><br>one of the outcomes of writing it down was the realisation that a lot of the information was repetative, what needed to be written again and again, and what didnt. <br><br><br><br>2. started laying it out with keeping in mind that it could be beneficail if we only wrote what differered in the different pricing plans instead of writing everything again.
+                <img src="img/this_came_up.png" style="width: 207%;">
+                <br><br>
+                3. The problem was that there was not enough space to put all the data into all the coloumns.Finally we realised that it will make be much easiar to scan if we did it using a website. <br>A possible solution came up
+                <img src="img/Group80.png" style="width: 207%; border-bottom: rgb(134, 134, 134) 1px solid;">
+                <br><br>
+                Hovering for the desktop version and a set of radio switches for the mobile version.
+                <img src="img/controls_cendrol.jpg" style="width: 107%;"></div>
+            <div class="cell cell-10" style="color: black;">What it looked like before:<img src="img/before.jpg" style="width: 85%;"><img src="img/writing.jpg" style="width: 70%; padding-top: 1.5vw;">
+            <div class="cell cell-11" style="color: black;">
+              <!-- 11* -->
+            </div>
+
+          </div>
+        </div>
+
+        <div id="keito" class="container" style="font-family: georama;">
+          <div class="cell cell-1"><img src="img/new/keito_1.png" style="width: 207%;"></div>
+          <div class="cell cell-2">2.</div>
+          <div class="cell cell-3"></div>
+          <div class="cell cell-4" style="font-family: 'georama',sans-serif;">Keito, layout and illustration design journey</div>
+          <div class="cell cell-5"><img style="width: 30%;" src="img/stamp.svg"></div>
+          <div class="cell cell-6">6.</div>
+          <div class="cell cell-7">7.</div>
+          <div class="cell cell-8"><div style="border-left:  1px rgb(184, 184, 184) solid; height: 110%; margin-top: -13.5vw;"></div></div>
+          <div class="cell cell-9"><img src="img/new/keito_2.png" style="width: 207%;"> </div>
+          <div class="cell cell-10"></div>
+          <div class="cell cell-11" style="height: 0vw;"> </div>
+        </div>
+
+        <div id="slang" class="container" style="font-family: georama;">
+          <div class="cell cell-1"><img style="width: 207%;" src="img/figma.svg"><br><br><img style="width: 207%;" src="img/field.jpg"></div>
+          <div class="cell cell-2"></div>
+          <div class="cell cell-3"></div>
+          <div class="cell cell-4" style="font-family: 'georama',sans-serif;">Slanglabs: details in console(web app)</div>
+          <div class="cell cell-5"><img style="width: 30%;" src="img/stamp.svg"></div>
+          <div class="cell cell-6">6.</div>
+          <div class="cell cell-7">7.</div>
+          <div class="cell cell-8"><div style="border-left:  1px rgb(184, 184, 184) solid; height: 110%; margin-top: -13.5vw;"></div></div>
+          <div class="cell cell-9"> Purpose: provide a point of delight to the developer using the console by Slanglabs,
+            These keep changing as the developer makes more projects with the console.
+            <br>
+            <br>
+            <img style="width: 207%;" src="img/cosole.jpg">
+             </div>
+          <div class="cell cell-10"></div>
+          <div class="cell cell-11" style="height: 0vw;"> </div>
+        </div>
+
+        <div class="container" style="font-family: georama; padding-top: 1vw;">
+          <div class="cell cell-1"></div>
+          <div class="cell cell-2"></div>
+          <div class="cell cell-3"></div>
+          <div class="cell cell-4" style="font-family: 'georama',sans-serif;"></div>
+          <div class="cell cell-5"></div>
+          <div class="cell cell-6"></div>
+          <div class="cell cell-7"></div>
+          <div class="cell cell-8"></div>
+          <div class="cell cell-9">Nikhil previously worked as an illustrator, checkout his earlier illustration work at→ <a href="http://www.nimawat.com/">nimawat.com</a>  </div>
+          <div class="cell cell-10"></div>
+          <div class="cell cell-11" style="height: 0vw;"> </div>
+        </div>
+
+
+  <script>
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        document.getElementById("navbar").style.top = "0";
+      } else {
+        document.getElementById("navbar").style.top = "-5vw";
+      }
+      prevScrollpos = currentScrollPos;
+    }
+    </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script><script src="./script.js"></script>
+
+  <script defer class="speakerdeck-embed" data-id="40cf054c575f4fbab85a84ae80431b80" data-ratio="1.7772511848341233" src="//speakerdeck.com/assets/embed.js"></script>
+
+<grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></body></html>
