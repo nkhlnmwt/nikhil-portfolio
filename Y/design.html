@@ -32,6 +32,22 @@
         src: url('fonts/Castoro-Roman.woff2') format('woff2');
     }
 
+
+    @font-face {
+  font-family: 'castoro'; /* This is the name you'll use to apply the font */
+  src: url('fonts/Castoro-Roman.woff2') format('woff2'),
+  font-weight: normal; /* Or a specific numeric value like 400 */
+  font-style: normal;
+}
+
+/* Define the italic version of your font */
+@font-face {
+  font-family: 'castoro'; /* IMPORTANT: Use the same font-family name */
+  src: url('fonts/Castoro-Italic.woff2') format('woff2'),
+  font-weight: normal; /* Adjust if your italic font is also a different weight */
+  font-style: italic;   /* This tells the browser this is the italic variant */
+}
+
   a {
     text-decoration: underline;
     color: black;
